@@ -1,0 +1,18 @@
+@import "variables";
+@import "fonts";
+@import "utilities";
+@import "modal";
+@import "navbar";
+@import "carousel";
+@import "content";
+@import "footer";
+
+body.home {
+	color: $orange;
+	#carrossel {
+		background: $black;
+	}
+	.content {
+		background: url('../../images/bg-content.jpg') no-repeat center top;
+	}
+}

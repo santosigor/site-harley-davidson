@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Cheddar Gothic Sans';
+  src: url('../font/CheddarGothicSans.eot');
+  src: url('../font/CheddarGothicSans.eot?#iefix') format('embedded-opentype'),
+      url('../font/CheddarGothicSans.woff2') format('woff2'),
+      url('../font/CheddarGothicSans.woff') format('woff'),
+      url('../font/CheddarGothicSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cheddar Gothic Sans Italic';
+  src: url('../font/CheddarGothicSans-Italic.eot');
+  src: url('../font/CheddarGothicSans-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../font/CheddarGothicSans-Italic.woff2') format('woff2'),
+      url('../font/CheddarGothicSans-Italic.woff') format('woff'),
+      url('../font/CheddarGothicSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT Std 18';
+  src: url('../font/TradeGothicLTStd-Cn18.eot');
+  src: url('../font/TradeGothicLTStd-Cn18.eot?#iefix') format('embedded-opentype'),
+      url('../font/TradeGothicLTStd-Cn18.woff2') format('woff2'),
+      url('../font/TradeGothicLTStd-Cn18.woff') format('woff'),
+      url('../font/TradeGothicLTStd-Cn18.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT Std 20';
+  src: url('../font/TradeGothicLTStd-BdCn20.eot');
+  src: url('../font/TradeGothicLTStd-BdCn20.eot?#iefix') format('embedded-opentype'),
+      url('../font/TradeGothicLTStd-BdCn20.woff2') format('woff2'),
+      url('../font/TradeGothicLTStd-BdCn20.woff') format('woff'),
+      url('../font/TradeGothicLTStd-BdCn20.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT Std 20 Obl';
+  src: url('../font/TradeGothicLTStd-BdCn20Obl.eot');
+  src: url('../font/TradeGothicLTStd-BdCn20Obl.eot?#iefix') format('embedded-opentype'),
+      url('../font/TradeGothicLTStd-BdCn20Obl.woff2') format('woff2'),
+      url('../font/TradeGothicLTStd-BdCn20Obl.woff') format('woff'),
+      url('../font/TradeGothicLTStd-BdCn20Obl.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
