@@ -8,11 +8,13 @@
 @import "footer";
 
 body.home {
-	color: $orange;
-	#carrossel {
-		background: $black;
-	}
 	.content {
 		background: url('../../images/bg-content.jpg') no-repeat center top;
+	}
+	#section-1 {
+		background: $black;
+	}
+	#section-3 {
+		color: $white;
 	}
 }

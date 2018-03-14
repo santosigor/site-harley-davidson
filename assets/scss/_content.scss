@@ -1,6 +1,7 @@
 body {
 	font-family: 'Trade Gothic LT Std 18';
 	background: $black;
+	padding-bottom:40px;
 }
 
 b, strong {
@@ -10,7 +11,9 @@ b, strong {
 
 .section-container {
 	min-height: $height_section;
-	border-bottom:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #3c3;
+	padding: 100px 0;
 }
 
 .back-to-top {

@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
-    if (windscroll >= 450) {
+    if (windscroll >= 768) {
       $('.back-to-top').addClass('fixed');
     } else {
       $('.back-to-top').removeClass('fixed');

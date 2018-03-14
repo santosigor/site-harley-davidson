@@ -18,5 +18,55 @@
 
 // btn
 
+// Color text
+
+.text-color-1 {
+	color: $text-color-1;
+}
+
+.text-color-2 {
+	color: $text-color-2;
+}
+
+.text-color-3 {
+	color: $text-color-3;
+}
+
+// Font size
+
+.font-small {
+	font-size: 30px;
+}
+
+.font-medium {
+	font-size: 68px;
+	line-height: 76px;
+}
+
+.font-large {
+	font-size: 78px;
+	line-height: 82px;
+}
+
+.font-extra-large {
+	font-size: 88px;
+	line-height: 88px;
+}
+
+// btn
+
+.bt {
+  padding: 0.8rem 5.6rem 0.8rem 1.5rem;
+  background-color: $white;
+  color: $black;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration:none;
+  &:hover {
+  	text-decoration:none;
+  	color: $black;
+  }
+}
 
 // Redes sociais
