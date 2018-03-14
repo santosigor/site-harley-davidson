@@ -1,4 +1,11 @@
 footer {
 	background: $black;
-	min-height: $height_section;
+	height: $height_section;
+	border-top:1px solid #fff;
+}
+
+@media screen and (min-height: 853px) {
+	footer {
+		height: 853px;
+	}
 }

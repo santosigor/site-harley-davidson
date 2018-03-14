@@ -10,9 +10,8 @@ b, strong {
 }
 
 .section-container {
-	min-height: $height_section;
+	height: $height_section;
 	border-top:1px solid #fff;
-	border-bottom:1px solid #3c3;
 	padding: 100px 0;
 }
 
@@ -52,4 +51,10 @@ b, strong {
 	  margin:0 auto;
 	  padding:8px 0;
   }
+}
+
+@media screen and (min-height: 853px) {
+	.section-container {
+		height: 853px;
+	}
 }

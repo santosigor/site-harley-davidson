@@ -9,15 +9,58 @@
 
 body.home {
 	.content {
-		background: url('../../images/bg-content.jpg');
-		background-position: center top;
-		background-repeat: no-repeat;
-		background-size: cover;
+		background: url('../../images/bg-content.jpg') center top no-repeat;
 	}
-	#section-1 {
-		background: $black;
+	header {
+		max-width:1440px;
+		margin:0 auto;
+		position:relative;
+		.text-banner {
+			position:absolute;
+			top:0;
+			left:150px;
+			color: $white;
+			z-index:1;
+			height: $height_section;
+		}
+		.bt {
+			background: $orange;
+			color:$white;
+		}
+		#banner {
+			.item {
+				max-width: 1440px;
+				height: $height_section;
+				margin:0 auto;
+				&.it-1 {
+					background: url('../../images/banner-1.jpg') center center no-repeat;
+					background-size: cover;
+				}
+				&.it-2 {
+					background: url('../../images/banner-2.jpg') center center no-repeat;
+					background-size: cover;
+				}
+				&.it-3 {
+					background: url('../../images/banner-3.jpg') center center no-repeat;
+					background-size: cover;
+				}
+			}
+		}
 	}
-	#section-3 {
-		color: $white;
+}
+
+@media screen and (min-height: 853px) {
+	body.home {
+		header {
+			height: 853px;
+			.text-banner {
+				height: 853px;
+			}
+			#banner {
+				.item {
+					height: 853px;
+				}
+			}
+		}
 	}
 }
