@@ -3,64 +3,85 @@
 @import "utilities";
 @import "modal";
 @import "navbar";
-@import "carousel";
 @import "content";
 @import "footer";
 
 body.home {
-	.content {
-		background: url('../../images/bg-content.jpg') center top no-repeat;
-	}
+	background-color: $black;
 	header {
-		max-width:1440px;
+		@extend %heightPattern;
+		max-width: 1366px;
 		margin:0 auto;
-		position:relative;
-		.text-banner {
-			position:absolute;
-			top:0;
-			left:150px;
-			color: $white;
-			z-index:1;
-			height: $height_section;
+		padding: 15px 0 50px 0;
+		&.bg-1 {
+			background: url('../../images/banner-1.jpg') center center;
+			background-size: 100% auto;
 		}
-		.bt {
-			background: $orange;
-			color:$white;
+		&.bg-2 {
+			background: url('../../images/banner-2.jpg') center center;
+			background-size: 100% auto;
 		}
-		#banner {
-			.item {
-				max-width: 1440px;
-				height: $height_section;
-				margin:0 auto;
-				&.it-1 {
-					background: url('../../images/banner-1.jpg') center center no-repeat;
-					background-size: cover;
-				}
-				&.it-2 {
-					background: url('../../images/banner-2.jpg') center center no-repeat;
-					background-size: cover;
-				}
-				&.it-3 {
-					background: url('../../images/banner-3.jpg') center center no-repeat;
-					background-size: cover;
+		&.bg-3 {
+			background: url('../../images/banner-3.jpg') center center;
+			background-size: 100% auto;
+		}
+		nav {
+			.social-icons {
+				margin-top:18px;
+				a {
+					display: inline-block;
+					margin:0 15px;
 				}
 			}
 		}
+		.text-header {
+			color: $white;
+			padding: 50px 0;
+			.font-1 {
+				font-size: 3.8em;
+				line-height: 1.05em;
+				margin-bottom:30px;
+			}
+			.font-2 {
+				font-size: 2.2em;
+				margin-bottom:10px;
+			}
+			.font-3 {
+				font-size: 1.68em;
+				line-height: 1.3em;
+				margin-bottom:30px;
+			}
+			.bt {
+				background: $orange;
+				margin-bottom:15px;
+			}
+			.font-4 {
+				font-size: .8em;
+				margin-bottom:0;
+				a {
+					color:$white;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	#section-1 {
+		background: $black;
+		iframe {
+			width:100%;
+			@extend %heightPattern; 
+			min-height: 595px;
+		}
+	}
+	.content {
+		background: url('../../images/bg-content.jpg') center top no-repeat $black;
+	}
+	.text-pdl-custom {
+		padding-left: 60px;
+	}
+	.text-pdr-custom {
+		padding-right: 60px;
 	}
 }
 
-@media screen and (min-height: 853px) {
-	body.home {
-		header {
-			height: 853px;
-			.text-banner {
-				height: 853px;
-			}
-			#banner {
-				.item {
-					height: 853px;
-				}
-			}
-		}
-	}
-}
+// responsive

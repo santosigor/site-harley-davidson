@@ -1,11 +1,25 @@
 footer {
 	background: $black;
-	height: $height_section;
-	border-top:1px solid #fff;
+	@extend %heightPattern;
+	color: $white;
+	padding: 50px 0;
+	.social-icons {
+		margin-bottom:50px;
+		a {
+			display: inline-block;
+			margin:0 15px;
+		}
+	}
+	.rights {
+		max-width: 470px;
+		margin:0 auto;
+	}
 }
 
-@media screen and (min-height: 853px) {
-	footer {
-		height: 853px;
+// responsive
+
+@media screen and (min-height: 668px) {
+	%heightPattern {
+	  min-height: 568px;
 	}
 }

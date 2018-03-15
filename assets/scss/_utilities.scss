@@ -1,3 +1,27 @@
+// height
+
+%heightPattern {
+  min-height: $height;
+}
+
+// transition
+
+%transition0-2s-e-i-o {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+%transition0-5s-e-i-o {
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
 //Fonts
 
 .font-cheddar-gothic-sans {
@@ -15,8 +39,6 @@
 .font-trade-gothic-lt-std-20-obl {
 	font-family: 'Trade Gothic LT Std 20 Obl';
 }
-
-// btn
 
 // Color text
 
@@ -38,40 +60,122 @@
 
 // Font size
 
+.font-small-0 {
+	font-size: .9em;
+}
+
+.font-small-1 {
+	font-size: 1.5em;
+}
+
+.font-small-2 {
+	font-size: 1.33em;
+  line-height: 1.3em;
+}
+
 .font-small {
-	font-size: 30px;
+	font-size: 1.7em;
 }
 
 .font-medium {
-	font-size: 48px;
-	line-height: 56px;
+  font-size: 3.8em;
+  line-height: 1.1em;
+}
+
+.font-medium-2 {
+  font-size: 3.2em;
+  line-height: 1.1em;
+}
+
+.font-medium-3 {
+  font-size: 2.2em;
+  line-height: 1.1em;
 }
 
 .font-large {
-	font-size: 78px;
-	line-height: 82px;
+  font-size: 4.5em;
+  line-height: 1.1em;
 }
 
 .font-extra-large {
-	font-size: 88px;
-	line-height: 88px;
+  font-size: 5em;
+  line-height: 1.1em;
 }
 
 // btn
 
 .bt {
 	margin-top:10px;
-  padding: 0.8rem 5.6rem 0.8rem 1.5rem;
+  padding: 0.8rem 4.8rem 0.8rem 1.5rem;
   background-color: $white;
   color: $black;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   text-decoration:none;
+  position: relative;
+  &:before {
+	  content: '';
+	  position: absolute;
+	  top:50%;
+	  right: 1.6rem;
+	  margin-top: -8px;
+	  width:22px;
+	  height:16px;
+	  background: url('../../images/icon-bt.png') no-repeat;
+	  background-position: -45px 0;
+  }
   &:hover {
   	text-decoration:none;
   	color: $black;
+  	&:before {
+  		@extend %transition0-5s-e-i-o;
+	 		background-position:1px 0;
+	  }
+  }
+}
+
+.back-to-top {
+  background: #1a1a1a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:0;
+  cursor: pointer;
+  @extend %transition0-2s-e-i-o;
+  &.fixed {
+  	height:40px;
+  }
+  span {
+  	display:block;
+  	background: url('../../images/icon-back-to-top.png') no-repeat;
+		background-position: center right;
+		color: $white;
+	  font-family: 'Trade Gothic LT Std 20 Obl';
+	  width: 148px;
+	  height:40px;
+	  line-height:40px;
+	  margin:0 auto;
   }
 }
 
 // Redes sociais
+
+
+
+
+
+// responsive
+
+@media screen and (min-height: 668px) {
+	%heightPattern {
+	  min-height: auto;
+	}
+}
+
+@media (max-width: 991.98px) {
+	%heightPattern {
+	  min-height: auto;
+	}
+}
