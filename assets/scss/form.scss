@@ -7,5 +7,41 @@
 @import "footer";
 
 body.form {
-	color: red;
+	header {
+		@extend %heightPattern;
+		max-width: 1366px;
+		margin:0 auto;
+		padding: 15px 0 50px 0;
+		background: url('../../images/banner-form.jpg') center center;
+		background-size: 100% auto;
+		color: $white;
+	}
+	.content {
+		background: $white;
+		max-width: 1366px;
+		margin:0 auto;
+	}
+	.campo {
+		margin-bottom:20px;
+		label {
+			font-family: 'Trade Gothic LT Std 20';
+	    margin-bottom: 0;
+		}
+		input[type="text"], select {
+			width:100%;
+			max-width: 350px;
+			height: 50px;
+			border: 1px solid #7e7e7e;
+			outline:none;
+			padding: 15px 10px;
+			line-height:50px;
+		}
+		.pretty.p-default input:checked~.state label:after {
+			background-color: $orange!important;
+		}
+	}
+	.bt {
+		background: $orange;
+		margin-bottom:15px;
+	}
 }
