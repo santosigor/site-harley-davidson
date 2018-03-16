@@ -2,46 +2,99 @@
 @import "fonts";
 @import "utilities";
 @import "modal";
-@import "header";
 @import "content";
 @import "footer";
 
 body.form {
 	header {
 		@extend %heightPattern;
-		max-width: 1366px;
-		margin:0 auto;
-		padding: 15px 0 50px 0;
+		padding: 90px 0;
 		background: url('../../images/banner-form.jpg') center center;
-		background-size: 100% auto;
+		background-size: cover;
 		color: $white;
+		.img-header-form {
+			max-width: 260px;
+			margin:0 auto;
+			margin-bottom: 70px;
+		}
+		.font-size-42 {
+			font-size: 42pt;
+			margin-bottom: 0;
+		}
+		.font-size-14 {
+			font-size: 14pt;
+			margin-bottom: 70px;
+		}
 	}
 	.content {
 		background: $white;
-		max-width: 1366px;
-		margin:0 auto;
+		padding: 100px 0;
+	}	
+	.font-size-1-84 {
+		font-size: 1.84em;
+		line-height: 1.2em;
+		margin-bottom: 5px;
 	}
 	.campo {
-		margin-bottom:20px;
+		margin-bottom:22px;
 		label {
-			font-family: 'Trade Gothic LT Std 20';
-	    margin-bottom: 0;
+			font-family: 'Noto Sans Bold';
+		}
+		> label {
+	    margin-bottom: 2px;
+	    &.lb-mg-custom {
+	    	margin-bottom: 13px;
+	    }
 		}
 		input[type="text"], select {
 			width:100%;
 			max-width: 350px;
 			height: 50px;
-			border: 1px solid #7e7e7e;
+			border: 2px solid #7e7e7e;
 			outline:none;
-			padding: 15px 10px;
+			padding: 0 10px;
 			line-height:50px;
+	    -webkit-border-radius: 0;
+	    -moz-border-radius: 0;
+	    -ms-border-radius: 0;
+	    -o-border-radius: 0;
+	    border-radius: 0;
+			font-family: 'Noto Sans'!important;
+			color:#7e7e7e;
+		}
+		select {
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    background: #fff url(../../images/select-arrow.jpg) no-repeat right center;
+	    cursor: pointer;
+	    background-position-x: 320px;
 		}
 		.pretty.p-default input:checked~.state label:after {
 			background-color: $orange!important;
 		}
+		.pretty .state label {
+		  text-indent: 1.8em;
+		}
+		.pret-wd-custom {
+			width: 150px;
+	    margin-bottom: 10px;
+		}
+		.pretty .state label:before {
+	    border: 2px solid #7e7e7e;
+		}
+		.termos {
+	    margin-top: 35px;
+			span {
+				padding-left:30px;
+			margin-top:-20px;
+			}
+		}
+		a.lnk-regulamento{
+			color:$black;
+		}
 	}
 	.bt {
-		background: $orange;
-		margin-bottom:15px;
+		background: $orange-2;
 	}
 }

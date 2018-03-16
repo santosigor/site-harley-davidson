@@ -1,4 +1,26 @@
 @font-face {
+  font-family: 'Noto Sans';
+  src: url('../font/NotoSans.eot');
+  src: url('../font/NotoSans.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSans.woff2') format('woff2'),
+      url('../font/NotoSans.woff') format('woff'),
+      url('../font/NotoSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Bold';
+  src: url('../font/NotoSans-Bold.eot');
+  src: url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSans-Bold.woff2') format('woff2'),
+      url('../font/NotoSans-Bold.woff') format('woff'),
+      url('../font/NotoSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Cheddar Gothic Sans';
   src: url('../font/CheddarGothicSans.eot');
   src: url('../font/CheddarGothicSans.eot?#iefix') format('embedded-opentype'),

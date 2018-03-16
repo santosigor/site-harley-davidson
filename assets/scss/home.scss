@@ -9,8 +9,6 @@
 body.home {
 	header {
 		@extend %heightPattern;
-		max-width: 1366px;
-		margin:0 auto;
 		padding: 15px 0 50px 0;
 		&.bg-1 {
 			background: url('../../images/banner-1.jpg') center center;
@@ -69,7 +67,7 @@ body.home {
 		iframe {
 			width:100%;
 			@extend %heightPattern; 
-			min-height: 595px;
+			//min-height: 595px;
 		}
 	}
 	.content {

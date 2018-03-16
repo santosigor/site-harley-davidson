@@ -24,20 +24,26 @@
 
 //Fonts
 
+.font-noto-sans {
+	font-family: 'Noto Sans'!important;
+}
+.font-noto-sans-bold {
+	font-family: 'Noto Sans Bold'!important;
+}
 .font-cheddar-gothic-sans {
-	font-family: 'Cheddar Gothic Sans';
+	font-family: 'Cheddar Gothic Sans'!important;
 }
 .font-cheddar-gothic-sans-italic {
-	font-family: 'Cheddar Gothic Sans Italic';
+	font-family: 'Cheddar Gothic Sans Italic'!important;
 }
 .font-trade-gothic-lt-std-18 {
-	font-family: 'Trade Gothic LT Std 18';
+	font-family: 'Trade Gothic LT Std 18'!important;
 }
 .font-trade-gothic-lt-std-20 {
-	font-family: 'Trade Gothic LT Std 20';
+	font-family: 'Trade Gothic LT Std 20'!important;
 }
 .font-trade-gothic-lt-std-20-obl {
-	font-family: 'Trade Gothic LT Std 20 Obl';
+	font-family: 'Trade Gothic LT Std 20 Obl'!important;
 }
 
 // Color text
@@ -56,6 +62,10 @@
 
 .text-color-orange {
 	color: $orange;
+}
+
+.text-color-orange-2 {
+	color: $orange-2;
 }
 
 // Font size
@@ -114,27 +124,52 @@
   text-transform: uppercase;
   text-decoration:none;
   position: relative;
-  &:before {
-	  content: '';
-	  position: absolute;
-	  top:50%;
-	  right: 1.6rem;
-	  margin-top: -8px;
-	  width:22px;
-	  height:16px;
-	  background: url('../../images/icon-bt.png') no-repeat;
-	  background-position: -45px 0;
-  }
-  &:hover {
-  	text-decoration:none;
-  	color: $black;
+  font-family: 'Noto Sans Bold';
+  &.icon-vt {
   	&:before {
-  		@extend %transition0-5s-e-i-o;
-	 		background-position:1px 0;
+		  content: '';
+		  position: absolute;
+		  top:50%;
+		  right: 1.6rem;
+		  margin-top: -11px;
+		  width:16px;
+		  height:22px;
+		  background: url('../../images/icon-bt-vt.png') no-repeat;
+		  background-position:  0 -45px;
+	  }
+	  &:hover {
+	  	text-decoration:none;
+	  	color: $black;
+	  	&:before {
+	  		@extend %transition0-5s-e-i-o;
+		 		background-position: 0 1px;
+		  }
+	  }
+  }
+  &.icon-ht {
+  	&:before {
+		  content: '';
+		  position: absolute;
+		  top:50%;
+		  right: 1.6rem;
+		  margin-top: -8px;
+		  width:22px;
+		  height:16px;
+		  background: url('../../images/icon-bt-ht.png') no-repeat;
+		  background-position: -45px 0;
+	  }
+	  &:hover {
+	  	text-decoration:none;
+	  	color: $black;
+	  	&:before {
+	  		@extend %transition0-5s-e-i-o;
+		 		background-position:1px 0;
+		  }
 	  }
   }
 }
 
+/*
 .back-to-top {
   background: #1a1a1a;
   position: fixed;
@@ -158,7 +193,7 @@
 	  line-height:40px;
 	  margin:0 auto;
   }
-}
+}*/
 
 // Redes sociais
 
@@ -170,12 +205,12 @@
 
 @media screen and (min-height: 668px) {
 	%heightPattern {
-	  min-height: auto;
+	  //min-height: auto;
 	}
 }
 
 @media (max-width: 991.98px) {
 	%heightPattern {
-	  min-height: auto;
+	  //min-height: auto;
 	}
 }
