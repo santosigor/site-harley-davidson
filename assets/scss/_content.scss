@@ -7,12 +7,54 @@ body {
 
 b, strong {
 	font-weight: normal;
-	font-family: 'Trade Gothic LT Std 20';
+	font-family: 'Noto Sans Bold';
+}
+
+#wrapper {
+	max-width:1440px;
+	margin:0 auto;
+}
+
+.content {
+	background: url('../../images/bg-content.jpg') top center no-repeat $black;
+	background-size: 100% auto;
 }
 
 .section-container {
 	@extend %heightPattern;
-	padding: 50px 0;
+	padding: 140px 0;
+}
+
+.campo {
+	input[type="text"], select {
+		width:100%;
+		max-width: 350px;
+		height: 50px;
+		border: 2px solid #7e7e7e;
+		outline:none;
+		padding: 0 10px;
+		line-height:50px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+		font-family: 'Noto Sans'!important;
+		color:#7e7e7e;
+	}
+	select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url(../../images/select-arrow.jpg) no-repeat right center;
+    cursor: pointer;
+    background-position-x: 320px;
+	}
+}
+
+
+a, button {
+	outline: none!important;
 }
 
 // responsive

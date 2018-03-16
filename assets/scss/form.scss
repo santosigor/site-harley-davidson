@@ -1,5 +1,5 @@
-@import "variables";
 @import "fonts";
+@import "variables";
 @import "utilities";
 @import "modal";
 @import "content";
@@ -45,30 +45,6 @@ body.form {
 	    &.lb-mg-custom {
 	    	margin-bottom: 13px;
 	    }
-		}
-		input[type="text"], select {
-			width:100%;
-			max-width: 350px;
-			height: 50px;
-			border: 2px solid #7e7e7e;
-			outline:none;
-			padding: 0 10px;
-			line-height:50px;
-	    -webkit-border-radius: 0;
-	    -moz-border-radius: 0;
-	    -ms-border-radius: 0;
-	    -o-border-radius: 0;
-	    border-radius: 0;
-			font-family: 'Noto Sans'!important;
-			color:#7e7e7e;
-		}
-		select {
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-	    appearance: none;
-	    background: #fff url(../../images/select-arrow.jpg) no-repeat right center;
-	    cursor: pointer;
-	    background-position-x: 320px;
 		}
 		.pretty.p-default input:checked~.state label:after {
 			background-color: $orange!important;

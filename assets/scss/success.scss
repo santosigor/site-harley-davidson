@@ -1,8 +1,30 @@
-@import "variables";
 @import "fonts";
+@import "variables";
 @import "utilities";
 @import "content";
 
 body.bd-success {
-	color: red;
+	header {
+		@extend %heightPattern;
+		padding: 90px 0;
+		background: url('../../images/banner-form.jpg') center center;
+		background-size: cover;
+		color: $white;
+		.img-header-form {
+			max-width: 260px;
+			margin:0 auto;
+			margin-bottom: 70px;
+		}
+		.font-size-42 {
+			font-size: 42pt;
+			margin-bottom: 0;
+		}
+		.font-size-14 {
+			font-size: 14pt;
+			margin-bottom: 70px;
+		}
+	}
+	.bt {
+		background: $orange-2;
+	}
 }

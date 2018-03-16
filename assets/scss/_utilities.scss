@@ -68,6 +68,11 @@
 	color: $orange-2;
 }
 
+.bg-orange {
+	background-color: $orange!important;
+	color:#fff!important;
+}
+
 // Font size
 
 .font-small-0 {
@@ -108,7 +113,7 @@
 }
 
 .font-extra-large {
-  font-size: 5em;
+  font-size: 5.5em;
   line-height: 1.1em;
 }
 
@@ -203,9 +208,10 @@
 
 // responsive
 
-@media screen and (min-height: 668px) {
+@media screen and (min-height: 1024px) {
 	%heightPattern {
-	  //min-height: auto;
+	  min-height: auto;
+	  min-height: 847px;
 	}
 }
 

@@ -1,5 +1,5 @@
-@import "variables";
 @import "fonts";
+@import "variables";
 @import "utilities";
 @import "modal";
 @import "navbar";
@@ -8,21 +8,64 @@
 
 body.home {
 	header {
+		position:relative;
 		@extend %heightPattern;
-		padding: 15px 0 50px 0;
+		padding: 15px 0 100px 0;
+		.dots {
+			position: absolute;
+			bottom:35px;
+			right:35px;
+			span {
+				display: inline-block;
+				width:14px;
+				height:14px;
+				margin:0 4px;
+				border: 2px solid #999999;
+				border-radius:10px;
+				cursor:pointer;
+				&.active {
+					background: #999999;
+				}
+			}
+		}
 		&.bg-1 {
 			background: url('../../images/banner-1.jpg') center center;
-			background-size: 100% auto;
+			background-size: cover;
+	  		@extend %transition0-2s-e-i-o;
+			.dots {
+				span {
+					&:nth-child(1) {
+						background: #999999;
+					}
+				}
+			}
 		}
 		&.bg-2 {
 			background: url('../../images/banner-2.jpg') center center;
-			background-size: 100% auto;
+			background-size: cover;
+	  		@extend %transition0-2s-e-i-o;
+			.dots {
+				span {
+					&:nth-child(2) {
+						background: #999999;
+					}
+				}
+			}
 		}
 		&.bg-3 {
 			background: url('../../images/banner-3.jpg') center center;
-			background-size: 100% auto;
+			background-size: cover;
+	  		@extend %transition0-2s-e-i-o;
+			.dots {
+				span {
+					&:nth-child(3) {
+						background: #999999;
+					}
+				}
+			}
 		}
 		nav {
+			margin-bottom:90px;
 			.social-icons {
 				margin-top:18px;
 				a {
@@ -33,19 +76,21 @@ body.home {
 		}
 		.text-header {
 			color: $white;
-			padding: 50px 0;
+			max-width:588px;
 			.font-1 {
-				font-size: 3.8em;
-				line-height: 1.05em;
-				margin-bottom:30px;
+				font-size: 46pt;
+				line-height: 1em;
+				margin-top:20px;
+				margin-bottom:60px;
 			}
 			.font-2 {
-				font-size: 2.2em;
-				margin-bottom:10px;
+				font-size: 34pt;
+				line-height: 1em;
+				margin-bottom:30px;
 			}
 			.font-3 {
-				font-size: 1.68em;
-				line-height: 1.3em;
+				font-size: 19pt;
+    		line-height: 1.5em;
 				margin-bottom:30px;
 			}
 			.bt {
@@ -62,22 +107,23 @@ body.home {
 			}
 		}
 	}
+	.img-right {
+		margin-left: 60px;
+	}
+	.img-left {
+		margin-left: -60px;
+	}
+	.letter-spc-4px {
+		letter-spacing: 3px;
+    font-size: 1.2em;
+	}
 	#section-1 {
-		background: $black;
+		padding:0;
 		iframe {
 			width:100%;
 			@extend %heightPattern; 
 			//min-height: 595px;
 		}
-	}
-	.content {
-		background: url('../../images/bg-content.jpg') center top no-repeat $black;
-	}
-	.text-pdl-custom {
-		padding-left: 60px;
-	}
-	.text-pdr-custom {
-		padding-right: 60px;
 	}
 }
 
