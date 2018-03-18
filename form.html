@@ -49,7 +49,7 @@
                 </p>
               </div>
               <div class="col-12 col-lg-8">
-                <form name="inscricao" id="inscricao" action="" method="">
+                <form name="inscricao" id="inscricao" action="success.html" method="post">
                   <div class="campo">
                     <label class="d-block font-noto-sans lb-mg-custom">Você possui CNH para motocicleta?</label>
                     <div class="pretty p-default">
@@ -87,56 +87,56 @@
                     </div>
                     <div class="campo">
                       <label class="d-block">TELEFONE/CELULAR</label>
-                      <input type="text" name="celular" placeholder="(  )" onkeyup="mascaraTexto(event,'(99)999999999');BloquearLetras(this,'num');" maxlength="13">
+                      <input type="text" name="telcelular" placeholder="(99)999999999" onkeyup="mascaraTexto(event,'(99)999999999');BloquearLetras(this,'num');" maxlength="13">
                     </div>
                     <div class="campo">
                       <label class="d-block">ESTADO</label>
                       <select name="estado" id="estado">
                         <option value="0">Selecione</option>
-                        <option value="1">AC - ACRE</option>
-                        <option value="2">AL - ALAGOAS</option>
-                        <option value="3">AM - AMAZONAS</option>
-                        <option value="4">AP - AMAPÁ</option>
-                        <option value="5">BA - BAHIA</option>
-                        <option value="6">CE - CEARÁ</option>
-                        <option value="7">DF - DISTRITO FEDERAL</option>
-                        <option value="8">ES - ESPÍRITO SANTO</option>
-                        <option value="9">GO - GOIÁS</option>
-                        <option value="10">MA - MARANHÃO</option>
-                        <option value="11">MG - MINAS GERAIS</option>
-                        <option value="12">MS - MATO GROSSO DO SUL</option>
-                        <option value="13">MT - MATO GROSSO</option>
-                        <option value="14">PA - PARÁ</option>
-                        <option value="15">PB - PARAÍBA</option>
-                        <option value="16">PE - PERNAMBUCO</option>
-                        <option value="17">PI - PIAUÍ</option>
-                        <option value="18">PR - PARANÁ</option>
-                        <option value="19">RJ - RIO DE JANEIRO</option>
-                        <option value="20">RN - RIO GRANDE DO NORTE</option>
-                        <option value="21">RO - RONDÔNIA</option>
-                        <option value="22">RR - RORAIMA</option>
-                        <option value="23">RS - RIO GRANDE DO SUL</option>
-                        <option value="24">SC - SANTA CATARINA</option>
-                        <option value="25">SP - SÃO PAULO</option>
-                        <option value="26">TO - TOCANTINS</option>
+                        <option value="AC">AC - ACRE</option>
+                        <option value="AL">AL - ALAGOAS</option>
+                        <option value="AM">AM - AMAZONAS</option>
+                        <option value="AP">AP - AMAPÁ</option>
+                        <option value="BA">BA - BAHIA</option>
+                        <option value="CE">CE - CEARÁ</option>
+                        <option value="DF">DF - DISTRITO FEDERAL</option>
+                        <option value="ES">ES - ESPÍRITO SANTO</option>
+                        <option value="GO">GO - GOIÁS</option>
+                        <option value="MA">MA - MARANHÃO</option>
+                        <option value="MG">MG - MINAS GERAIS</option>
+                        <option value="MS">MS - MATO GROSSO DO SUL</option>
+                        <option value="MT">MT - MATO GROSSO</option>
+                        <option value="PA">PA - PARÁ</option>
+                        <option value="PB">PB - PARAÍBA</option>
+                        <option value="PE">PE - PERNAMBUCO</option>
+                        <option value="PI">PI - PIAUÍ</option>
+                        <option value="PR">PR - PARANÁ</option>
+                        <option value="RJ">RJ - RIO DE JANEIRO</option>
+                        <option value="RN">RN - RIO GRANDE DO NORTE</option>
+                        <option value="RO">RO - RONDÔNIA</option>
+                        <option value="RR">RR - RORAIMA</option>
+                        <option value="RS">RS - RIO GRANDE DO SUL</option>
+                        <option value="SC">SC - SANTA CATARINA</option>
+                        <option value="SP">SP - SÃO PAULO</option>
+                        <option value="TO">TO - TOCANTINS</option>
                       </select>
                     </div>
                     <div class="campo">
                       <label class="d-block">CIDADE</label>
                       <select name="cidade" id="cidade">
-                        <option>Selecione sua cidade</option>
-                        <option>SP</option>
-                        <option>SP</option>
-                        <option>SP</option>
+                        <option value="0">Selecione sua cidade</option>
+                        <option value="">SP</option>
+                        <option value="">SP</option>
+                        <option value="">SP</option>
                       </select>
                     </div>
                     <div class="campo">
                       <label class="d-block">CONCESSIONÁRIA</label>
                       <select name="concessionaria" id="concessionaria">
-                        <option>Escolha a sua concessionária mais perto</option>
-                        <option>Concessionária</option>
-                        <option>Concessionária</option>
-                        <option>Concessionária</option>
+                        <option value="0">Escolha a sua concessionária mais perto</option>
+                        <option value="">Concessionária</option>
+                        <option value="">Concessionária</option>
+                        <option value="">Concessionária</option>
                       </select>
                     </div>
                     <div class="campo">
@@ -160,19 +160,23 @@
                       <div class="campo">
                         <label class="d-block">MARCA</label>
                         <select name="marca" id="marca">
-                          <option>Marca</option>
-                          <option>Concessionária</option>
-                          <option>Concessionária</option>
-                          <option>Concessionária</option>
+                          <option value="0">Marca</option>
+                          <option value="">Marca</option>
+                          <option value="">Marca</option>
+                          <option value="">Marca</option>
+                          <option value="">Marca</option>
+                          <option value="">Marca</option>
                         </select>
                       </div>
                       <div class="campo">
                         <label class="d-block">MODELO</label>
                         <select name="modelo" id="modelo">
-                          <option>Modelo</option>
-                          <option>Concessionária</option>
-                          <option>Concessionária</option>
-                          <option>Concessionária</option>
+                          <option value="0">Modelo</option>
+                          <option value="">Modelo</option>
+                          <option value="">Modelo</option>
+                          <option value="">Modelo</option>
+                          <option value="">Modelo</option>
+                          <option value="">Modelo</option>
                         </select>
                       </div>
                     </div>
@@ -226,8 +230,8 @@
                         </div>
                       </div>
                       <div class="pretty p-default d-block pret-wd-custom">
-                        <input type="checkbox" />
-                        <div class="state" name="contatado2">
+                        <input type="checkbox" name="contatado2">
+                        <div class="state">
                           <label>TELEFONE/CELULAR</label>
                         </div>
                       </div>
@@ -235,7 +239,7 @@
                     <div class="campo">
                       <div class="termos">
                         <div class="pretty p-default d-block pret-wp-custom">
-                          <input type="checkbox" />
+                          <input type="checkbox" name="dados"/>
                           <div class="state"><label></label></div>
                         </div>
                         <span class="d-block font-noto-sans">Concordo que os dados ora fornecidos, incluindo-se nome, endereço, e-mail e telefone, serão armazenados e poderão ser usados e compartilhados pela Harley-Davidson® do Brasil Ltda com as demais empresas do grupo pelo mundo e/ou empresas parceiras (incluindo-se nossa rede de concessionárias independentes) para ações promocionais ou de marketing. Entendo que posso cancelar ou atualizar o meu registro de e-mail a qualquer momento. O consentimento para compartilhamento de informações e recebimento de comunicações de marketing se aplica em adição à Política de Privacidade da Harley-Davidson® do Brasil Ltda., cujos termos conheço e estou de acordo.</span>
@@ -244,7 +248,7 @@
                     <div class="campo">
                       <div class="termos">
                         <div class="pretty p-default d-block pret-wp-custom">
-                          <input type="checkbox" />
+                          <input type="checkbox" name="novidades"/>
                           <div class="state"><label></label></div>
                         </div>
                         <span class="d-block font-noto-sans">Sim, eu gostaria de receber novidades, materiais promocionais ou de marketing e comunicações periódicas da Harley-Davidson® do Brasil Ltda. e da sua rede de concessionárias independentes.</span>
@@ -253,7 +257,7 @@
                     <div class="campo">
                       <div class="termos">
                         <div class="pretty p-default d-block pret-wp-custom">
-                          <input type="checkbox" />
+                          <input type="checkbox" name="regulamento"/>
                           <div class="state"><label></label></div>
                         </div>
                         <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
@@ -262,16 +266,14 @@
                     <div class="campo">
                       <div class="termos">
                         <div class="pretty p-default d-block pret-wp-custom">
-                          <input type="checkbox" />
+                          <input type="checkbox" name="agendamento"/>
                           <div class="state"><label></label></div>
                         </div>
                         <span class="d-block font-noto-sans">Estou ciente de que o agendamento de test ride, o recebimento de envio de convite para test ride e a realização de test ride não são obrigatórios para participação na promoção; que, ao aceitar os termos do <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a>, aceito receber convite para um futuro test ride em 2018, via e-mail ou telefone/celular. Estou ciente de que é possível que não exista uma concessionária próxima à minha localidade para agendamento de test ride.</span>
                       </div>
                     </div>
-                    <a href="success.html" class="bt icon-ht">FAZER A INSCRIÇÃO</a>
-                    <div id="info-campo-vazio">
-                      Erro: sdpfkspodfk
-                    </div>
+                    <a href="javascript:Inscricao();" class="bt icon-ht">FAZER A INSCRIÇÃO</a>
+                    <div id="info-campo-vazio"></div>
                   </div>
                 </form>
               </div>

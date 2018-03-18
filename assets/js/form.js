@@ -85,46 +85,78 @@ function BloquearLetras(dom,tipo){
   dom.value=dom.value.replace(regex,'');
 }
 
-// Incricao
+// Inscricao
 
-function Incricao(){
+function Inscricao(){
 
   d = document.inscricao;
   erro = false;
-  texto = '<p>Verifique o(s) campo(s) abaixo:</p>';
+  texto = '';
               
-  if(d.nome.value==""){
+  if(d.cpf.value==""){
     erro=true; 
-    texto += '- Nome<br />';
+    texto += '<p>Erro: O CAMPO <b>CPF</b> NÃO FOI PREENCHIDO*';
+  }
+  if(d.nome.value==""){
+    erro=true;
+    texto += '<p>Erro: O CAMPO <b>NOME</b> NÃO FOI PREENCHIDO*';
+  }
+  if(d.sobrenome.value==""){
+    erro=true;
+    texto += '<p>Erro: O CAMPO <b>SOBRENOME</b> NÃO FOI PREENCHIDO*';
+  }
+  if(d.data_nascimento.value==""){
+    erro=true;
+    texto += '<p>Erro: O CAMPO <b>DATA DE NASCIMENTO</b> NÃO FOI PREENCHIDO*';
   }
   if(d.email.value==""){
     erro=true;
-    texto += '- E-mail<br />';
+    texto += '<p>Erro: O CAMPO <b>E-MAIL</b> NÃO FOI PREENCHIDO*';
   }
-  if(d.telefone.value==""){
+  if(d.telcelular.value=="" && d.telcelular.value.length < 12){
     erro=true; 
-    texto += '- Telefone<br />';
-  }
-  if(d.celular.value=="" && d.celular.value.length < 11 || d.celular.value.length < 12){
-    erro=true; 
-    texto += '- Celular<br />';
-  }
-  if(d.cidade.value==""){
-    erro=true; 
-    texto += '- Cidade<br />';
+    texto += '<p>Erro: O CAMPO <b>TELEFONE/CELULAR</b> NÃO FOI PREENCHIDO*';
   }
   if(d.estado.value == "0"){
     erro=true; 
-    texto += '- Estado<br />';
+    texto += '<p>Erro: O CAMPO <b>ESTADO</b> NÃO FOI PREENCHIDO*';
   }
-  if(d.mensagem.value==""){
+  if(d.cidade.value == "0"){
     erro=true; 
-    texto += '- Mensagem';
+    texto += '<p>Erro: O CAMPO <b>CIDADE</b> NÃO FOI PREENCHIDO*';
   }
-  if (erro) {
-    alertify.alert(texto);
+  if(d.concessionaria.value == "0"){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>CONCESSIONÁRIA</b> NÃO FOI PREENCHIDO*';
+  }
+  if(d.possui_motocicleta.value == "undefined" || d.possui_motocicleta.value == ""){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>POSSUI MOTOCICLETA?</b> NÃO FOI PREENCHIDO*';
   } else {
-    d.liberaEnvio.value=1;
+    if(d.possui_motocicleta.value == "1"){
+      if(d.marca.value == "0"){
+        erro=true; 
+        texto += '<p>Erro: O CAMPO <b>MARCA</b> NÃO FOI PREENCHIDO*';
+      } 
+      if(d.modelo.value == "0"){
+        erro=true; 
+        texto += '<p>Erro: O CAMPO <b>MODELO</b> NÃO FOI PREENCHIDO*';
+      } 
+    }
+    if(d.possui_motocicleta.value == "2"){
+      if(d.comprar.value == "undefined" || d.comprar.value == ""){
+        erro=true; 
+        texto += '<p>Erro: O CAMPO <b>EM QUANTO TEMPO PRETENDE COMPRAR?</b> NÃO FOI PREENCHIDO*';
+      } 
+    }
+  }
+  if($('input[name=contatado]:checked').is(':checked') == false && $('input[name=contatado2]:checked').is(':checked')  == false){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>De que forma prefere ser contatado?</b> NÃO FOI PREENCHIDO*';
+  } 
+  if (erro) {
+     $('#info-campo-vazio').html(texto).css('display', 'block');
+  } else {
     d.submit();
   }
 }
