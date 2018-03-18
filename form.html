@@ -35,8 +35,8 @@
       </header>
 
       <div class="content" id="formulario">
-        <section class="section-container d-flex">
-          <div class="container align-self-center">
+        <section class="section-container">
+          <div class="container">
             <div class="row">
               <div class="col-12 col-lg-4">
                 <p>
@@ -49,175 +49,230 @@
                 </p>
               </div>
               <div class="col-12 col-lg-8">
-                <form>
+                <form name="inscricao" id="inscricao" action="" method="">
                   <div class="campo">
                     <label class="d-block font-noto-sans lb-mg-custom">Você possui CNH para motocicleta?</label>
                     <div class="pretty p-default">
-                      <input type="radio" name="radio1">
+                      <input type="radio" name="cnh" id="cnh" value="1">
                       <div class="state"><label>SIM</label></div>
                     </div>
                     <div class="pretty p-default">
-                      <input type="radio" name="radio1">
+                      <input type="radio" name="cnh" id="cnh" value="2">
                       <div class="state"><label>NÃO</label></div>
+                      <a data-toggle="modal" data-target="#modalNaoPossuiCNH" id="lnk-nao-possui">nao-possui</a>
                     </div>
                   </div>
-                  <div class="campo">
-                    <label class="d-block">CPF</label>
-                    <input name="" type="text" placeholder="123.456.789-00">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">NOME</label>
-                    <input name="" type="text" placeholder="Nome">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">SOBRENOME</label>
-                    <input name="" type="text" placeholder="Sobrenome">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">E-MAIL</label>
-                    <input name="" type="text" placeholder="exemplo@exemplo.com.br">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">CELULAR</label>
-                    <input name="" type="text" placeholder="( )      -    ">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">ESTADO</label>
-                    <select>
-                      <option>Selecione</option>
-                      <option>SP</option>
-                      <option>SP</option>
-                      <option>SP</option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">CIDADE</label>
-                    <select>
-                      <option>Selecione sua cidade</option>
-                      <option>SP</option>
-                      <option>SP</option>
-                      <option>SP</option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">CONCESSIONÁRIA</label>
-                    <select>
-                      <option>Escolha a sua concessionária mais perto</option>
-                      <option>Concessionária</option>
-                      <option>Concessionária</option>
-                      <option>Concessionária</option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">DATA DE NASCIMENTO</label>
-                    <input name="" type="text" placeholder="DD-MM-YYYY">
-                  </div>
-                  <div class="campo">
-                    <label class="d-block">POSSUI MOTOCICLETA?</label>
-                    <div class="pretty p-default">
-                      <input type="radio" name="radio2">
-                      <div class="state">
-                        <label>SIM</label>
+                  <div id="form-etap-2">
+                    <div class="campo">
+                      <label class="d-block">CPF</label>
+                      <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" onblur="ValidaCPF(this.value);" onkeyup="mascaraTexto(event,'999.999.999-99');" maxlength="14">
+                      <span class="campo-invalido" id="cpf_invalido">CPF inválido!</span>
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">NOME</label>
+                      <input name="nome" type="text" placeholder="Nome" maxlength="300">
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">SOBRENOME</label>
+                      <input name="sobrenome" type="text" placeholder="Sobrenome" maxlength="300">
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">DATA DE NASCIMENTO</label>
+                      <input name="data_nascimento" type="text" placeholder="DD-MM-YYYY" onkeyup="mascaraTexto(event,'99-99-9999');" maxlength="10">
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">E-MAIL</label>
+                      <input type="text" name="email" id="email" placeholder="exemplo@exemplo.com.br" onblur="VerificaEmail(this);" maxlength="200">
+                      <span class="campo-invalido" id="email_invalido">E-mail inválido!</span>
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">TELEFONE/CELULAR</label>
+                      <input type="text" name="celular" placeholder="(  )" onkeyup="mascaraTexto(event,'(99)999999999');BloquearLetras(this,'num');" maxlength="13">
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">ESTADO</label>
+                      <select name="estado" id="estado">
+                        <option value="0">Selecione</option>
+                        <option value="1">AC - ACRE</option>
+                        <option value="2">AL - ALAGOAS</option>
+                        <option value="3">AM - AMAZONAS</option>
+                        <option value="4">AP - AMAPÁ</option>
+                        <option value="5">BA - BAHIA</option>
+                        <option value="6">CE - CEARÁ</option>
+                        <option value="7">DF - DISTRITO FEDERAL</option>
+                        <option value="8">ES - ESPÍRITO SANTO</option>
+                        <option value="9">GO - GOIÁS</option>
+                        <option value="10">MA - MARANHÃO</option>
+                        <option value="11">MG - MINAS GERAIS</option>
+                        <option value="12">MS - MATO GROSSO DO SUL</option>
+                        <option value="13">MT - MATO GROSSO</option>
+                        <option value="14">PA - PARÁ</option>
+                        <option value="15">PB - PARAÍBA</option>
+                        <option value="16">PE - PERNAMBUCO</option>
+                        <option value="17">PI - PIAUÍ</option>
+                        <option value="18">PR - PARANÁ</option>
+                        <option value="19">RJ - RIO DE JANEIRO</option>
+                        <option value="20">RN - RIO GRANDE DO NORTE</option>
+                        <option value="21">RO - RONDÔNIA</option>
+                        <option value="22">RR - RORAIMA</option>
+                        <option value="23">RS - RIO GRANDE DO SUL</option>
+                        <option value="24">SC - SANTA CATARINA</option>
+                        <option value="25">SP - SÃO PAULO</option>
+                        <option value="26">TO - TOCANTINS</option>
+                      </select>
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">CIDADE</label>
+                      <select name="cidade" id="cidade">
+                        <option>Selecione sua cidade</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                      </select>
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">CONCESSIONÁRIA</label>
+                      <select name="concessionaria" id="concessionaria">
+                        <option>Escolha a sua concessionária mais perto</option>
+                        <option>Concessionária</option>
+                        <option>Concessionária</option>
+                        <option>Concessionária</option>
+                      </select>
+                    </div>
+                    <div class="campo">
+                      <label class="d-block">POSSUI MOTOCICLETA?</label>
+                      <div class="pretty p-default">
+                        <input type="radio" name="possui_motocicleta" id="possui_motocicleta" value="1">
+                        <div class="state">
+                          <label>SIM</label>
+                        </div>
                       </div>
-                    </div>
-                    <div class="pretty p-default">
-                      <input type="radio" name="radio2">
-                      <div class="state">
-                        <label>NÃO</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="campo">
-                    <label class="d-block lb-mg-custom">EM QUANTO TEMPO PRETENDE COMPRAR?</label>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>0 a 3 MESES</label>
-                      </div>
-                    </div>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>4 a 6 MESES</label>
-                      </div>
-                    </div>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>7 a 12 MESES</label>
-                      </div>
-                    </div>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>12 MESES OU MAIS</label>
-                      </div>
-                    </div>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>NÃO SEI</label>
-                      </div>
-                    </div>
-                    <div class="pretty p-default pret-wd-custom">
-                      <input type="radio" name="radio3">
-                      <div class="state">
-                        <label>NÃO QUERO</label>
+                      <div class="pretty p-default">
+                        <input type="radio" name="possui_motocicleta" id="possui_motocicleta" value="2">
+                        <div class="state">
+                          <label>NÃO</label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="campo">
-                    <label class="d-block lb-mg-custom">De que forma prefere ser contatado?</label>
-                    <div class="pretty p-default d-block pret-wd-custom">
-                      <input type="checkbox" />
-                      <div class="state">
-                        <label>E-MAIL</label>
+                  <div id="form-etap-3">
+                    <div id="marca_modelo">
+                      <div class="campo">
+                        <label class="d-block">MARCA</label>
+                        <select name="marca" id="marca">
+                          <option>Marca</option>
+                          <option>Concessionária</option>
+                          <option>Concessionária</option>
+                          <option>Concessionária</option>
+                        </select>
+                      </div>
+                      <div class="campo">
+                        <label class="d-block">MODELO</label>
+                        <select name="modelo" id="modelo">
+                          <option>Modelo</option>
+                          <option>Concessionária</option>
+                          <option>Concessionária</option>
+                          <option>Concessionária</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="pretty p-default d-block pret-wd-custom">
-                      <input type="checkbox" />
-                      <div class="state">
-                        <label>TELEFONE/CELULAR</label>
+                    <div id="pretende_comprar">
+                      <div class="campo">
+                        <label class="d-block lb-mg-custom">EM QUANTO TEMPO PRETENDE COMPRAR?</label>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="1">
+                          <div class="state">
+                            <label>0 a 3 MESES</label>
+                          </div>
+                        </div>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="2">
+                          <div class="state">
+                            <label>4 a 6 MESES</label>
+                          </div>
+                        </div>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="3">
+                          <div class="state">
+                            <label>7 a 12 MESES</label>
+                          </div>
+                        </div>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="4">
+                          <div class="state">
+                            <label>12 MESES OU MAIS</label>
+                          </div>
+                        </div>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="5">
+                          <div class="state">
+                            <label>NÃO SEI</label>
+                          </div>
+                        </div>
+                        <div class="pretty p-default pret-wd-custom">
+                          <input type="radio" name="comprar" value="6">
+                          <div class="state">
+                            <label>NÃO QUERO</label>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="campo">
-                    <div class="termos">
-                      <div class="pretty p-default d-block pret-wp-custom">
+                    <div class="campo">
+                      <label class="d-block lb-mg-custom">De que forma prefere ser contatado?</label>
+                      <div class="pretty p-default d-block pret-wd-custom">
+                        <input type="checkbox" name="contatado">
+                        <div class="state">
+                          <label>E-MAIL</label>
+                        </div>
+                      </div>
+                      <div class="pretty p-default d-block pret-wd-custom">
                         <input type="checkbox" />
-                        <div class="state"><label></label></div>
+                        <div class="state" name="contatado2">
+                          <label>TELEFONE/CELULAR</label>
+                        </div>
                       </div>
-                      <span class="d-block font-noto-sans">Concordo que os dados ora fornecidos, incluindo-se nome, endereço, e-mail e telefone, serão armazenados e poderão ser usados e compartilhados pela Harley-Davidson® do Brasil Ltda com as demais empresas do grupo pelo mundo e/ou empresas parceiras (incluindo-se nossa rede de concessionárias independentes) para ações promocionais ou de marketing. Entendo que posso cancelar ou atualizar o meu registro de e-mail a qualquer momento. O consentimento para compartilhamento de informações e recebimento de comunicações de marketing se aplica em adição à Política de Privacidade da Harley-Davidson® do Brasil Ltda., cujos termos conheço e estou de acordo.</span>
+                    </div>
+                    <div class="campo">
+                      <div class="termos">
+                        <div class="pretty p-default d-block pret-wp-custom">
+                          <input type="checkbox" />
+                          <div class="state"><label></label></div>
+                        </div>
+                        <span class="d-block font-noto-sans">Concordo que os dados ora fornecidos, incluindo-se nome, endereço, e-mail e telefone, serão armazenados e poderão ser usados e compartilhados pela Harley-Davidson® do Brasil Ltda com as demais empresas do grupo pelo mundo e/ou empresas parceiras (incluindo-se nossa rede de concessionárias independentes) para ações promocionais ou de marketing. Entendo que posso cancelar ou atualizar o meu registro de e-mail a qualquer momento. O consentimento para compartilhamento de informações e recebimento de comunicações de marketing se aplica em adição à Política de Privacidade da Harley-Davidson® do Brasil Ltda., cujos termos conheço e estou de acordo.</span>
+                      </div>
+                    </div>
+                    <div class="campo">
+                      <div class="termos">
+                        <div class="pretty p-default d-block pret-wp-custom">
+                          <input type="checkbox" />
+                          <div class="state"><label></label></div>
+                        </div>
+                        <span class="d-block font-noto-sans">Sim, eu gostaria de receber novidades, materiais promocionais ou de marketing e comunicações periódicas da Harley-Davidson® do Brasil Ltda. e da sua rede de concessionárias independentes.</span>
+                      </div>
+                    </div>
+                    <div class="campo">
+                      <div class="termos">
+                        <div class="pretty p-default d-block pret-wp-custom">
+                          <input type="checkbox" />
+                          <div class="state"><label></label></div>
+                        </div>
+                        <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
+                      </div>
+                    </div>
+                    <div class="campo">
+                      <div class="termos">
+                        <div class="pretty p-default d-block pret-wp-custom">
+                          <input type="checkbox" />
+                          <div class="state"><label></label></div>
+                        </div>
+                        <span class="d-block font-noto-sans">Estou ciente de que o agendamento de test ride, o recebimento de envio de convite para test ride e a realização de test ride não são obrigatórios para participação na promoção; que, ao aceitar os termos do <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a>, aceito receber convite para um futuro test ride em 2018, via e-mail ou telefone/celular. Estou ciente de que é possível que não exista uma concessionária próxima à minha localidade para agendamento de test ride.</span>
+                      </div>
+                    </div>
+                    <a href="success.html" class="bt icon-ht">FAZER A INSCRIÇÃO</a>
+                    <div id="info-campo-vazio">
+                      Erro: sdpfkspodfk
                     </div>
                   </div>
-                  <div class="campo">
-                    <div class="termos">
-                      <div class="pretty p-default d-block pret-wp-custom">
-                        <input type="checkbox" />
-                        <div class="state"><label></label></div>
-                      </div>
-                      <span class="d-block font-noto-sans">Sim, eu gostaria de receber novidades, materiais promocionais ou de marketing e comunicações periódicas da Harley-Davidson® do Brasil Ltda. e da sua rede de concessionárias independentes.</span>
-                    </div>
-                  </div>
-                  <div class="campo">
-                    <div class="termos">
-                      <div class="pretty p-default d-block pret-wp-custom">
-                        <input type="checkbox" />
-                        <div class="state"><label></label></div>
-                      </div>
-                      <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
-                    </div>
-                  </div>
-                  <div class="campo">
-                    <div class="termos">
-                      <div class="pretty p-default d-block pret-wp-custom">
-                        <input type="checkbox" />
-                        <div class="state"><label></label></div>
-                      </div>
-                      <span class="d-block font-noto-sans">Estou ciente de que o agendamento de test ride, o recebimento de envio de convite para test ride e a realização de test ride não são obrigatórios para participação na promoção; que, ao aceitar os termos do <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a>, aceito receber convite para um futuro test ride em 2018, via e-mail ou telefone/celular. Estou ciente de que é possível que não exista uma concessionária próxima à minha localidade para agendamento de test ride.</span>
-                    </div>
-                  </div>
-                  <a href="success.html" class="bt icon-ht">FAZER A INSCRIÇÃO</a>
                 </form>
               </div>
             </div>
@@ -262,8 +317,8 @@
       <span>VOLTAR AO TOPO</span>
     </div>-->
 
-    <!-- modalRegulamento -->
-    <div class="modal fade" id="modalRegulamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- modalNaoPossuiCNH -->
+    <div class="modal fade" id="modalNaoPossuiCNH" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -281,6 +336,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/form.js"></script>
 
   </body>
 </html>
