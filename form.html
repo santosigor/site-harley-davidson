@@ -59,7 +59,7 @@
         <section class="section-container">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-12 col-lg-4">
+              <div class="col-12 col-md-4">
                 <p>
                   <span class="d-block font-cheddar-gothic-sans title-form">
                     faça a sua inscrição na promoção preenchendo o formulário
@@ -69,7 +69,7 @@
                   </span>
                 </p>
               </div>
-              <div class="col-12 col-lg-8">
+              <div class="col-12 col-md-8">
                 <form name="inscricao" id="inscricao" action="success.html" method="post">
                   <div class="campo">
                     <label class="d-block font-noto-sans lb-mg-custom">Você possui CNH para motocicleta?</label>
@@ -83,10 +83,11 @@
                       <a data-toggle="modal" data-target="#modalNaoPossuiCNH" id="lnk-nao-possui">nao-possui</a>
                     </div>
                   </div>
+                  <img src="images/pre-load-form.png" alt="" class="img-fluid" id="pre-load-form">
                   <div id="form-etap-2">
                     <div class="campo">
                       <label class="d-block">CPF</label>
-                      <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" onblur="ValidaCPF(this.value);" onkeyup="mascaraTexto(event,'999.999.999-99');" maxlength="14">
+                      <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" onblur="ValidaCPF(this.value);" onkeyup="mascaraTexto(event,'999.999.999-99');BloquearLetras(this,'num');" maxlength="14">
                       <span class="campo-invalido" id="cpf_invalido">“CPF inválido!</span>
                     </div>
                     <div class="campo">
@@ -104,7 +105,7 @@
                     </div>
                     <div class="campo">
                       <label class="d-block">TELEFONE/CELULAR</label>
-                      <input type="text" name="telcelular" placeholder="(99)999999999" onkeyup="mascaraTexto(event,'(99)999999999');BloquearLetras(this,'num');" maxlength="13">
+                      <input type="text" name="telcelular" placeholder="(99) 999999999" onkeyup="mascaraTexto(event,'(99) 999999999');BloquearLetras(this,'num');" maxlength="30">
                     </div>
                     <div class="campo">
                       <label class="d-block">ESTADO</label>
@@ -675,7 +676,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form.js"></script>
 
-    <!-- Código do Google para tag de remarketing -->
+   <!-- Código do Google para tag de remarketing -->
     <!--
     As tags de remarketing não podem ser associadas a informações pessoais de identificação nem inseridas em páginas relacionadas a categorias de confidencialidade. Veja mais informações e instruções sobre como configurar a tag em: http://google.com/ads/remarketingsetup
     -->

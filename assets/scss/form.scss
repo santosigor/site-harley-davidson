@@ -45,7 +45,7 @@ body.form {
 		  text-indent: 1.8em;
 		}
 		.pret-wd-custom {
-			width: 150px;
+			min-width: 150px;
 	    margin-bottom: 10px;
 		}
 		.pretty .state label:before {
@@ -131,7 +131,6 @@ body.form {
 		.content {
 			padding-bottom: 46px;
 		}
-
 		.bt {
 			padding: 0.8rem 3.8rem 0.8rem 1rem;
 			font-size: .9em;
@@ -242,6 +241,11 @@ body.form {
 		.content {
 			min-height:auto;
 			padding-bottom: 0;
+		}
+		.campo {
+			.pret-wd-custom {
+				min-width: 100%;
+			}
 		}
 	}
 }

@@ -149,6 +149,9 @@ body.bd-success {
 		}
 		.font-size-2 {
 			font-size: 1em;
+			br {
+				display:none;
+			}
 		}
 	}
 }

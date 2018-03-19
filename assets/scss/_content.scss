@@ -3,6 +3,7 @@ body {
 	//padding-bottom:40px;
 	background-color: $black;
 	color: $black;
+	overflow-x:hidden;
 }
 
 b, strong {
@@ -55,6 +56,9 @@ b, strong {
 	}
 }
 
+sup {
+  top: -0.3em;
+}
 
 a, button {
 	outline: none!important;
@@ -69,6 +73,12 @@ a, button {
 	&:hover {
 		color:$orange;
 	}
+}
+
+.owl-carousel .owl-item img {
+	display:inline-block;
+  width: auto;
+  max-width: 100%;
 }
 
 // responsive
@@ -89,7 +99,7 @@ a, button {
 		margin:0 auto;
 	}
 	.section-container {
-		padding: 90px 0;
+		padding: 96px 0;
 	}
 }
 
@@ -97,6 +107,9 @@ a, button {
 	.container-fluid {
 		max-width: 985px;
 		margin:0 auto;
+	}
+	.section-container {
+		padding: 80px 0;
 	}
 }
 

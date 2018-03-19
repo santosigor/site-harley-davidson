@@ -183,8 +183,10 @@ $(document).ready(function() {
     var cnh = $('input[name=cnh]:checked', '#inscricao').val();
     if (cnh==1) {
       $('#form-etap-2').css('display', 'block');
+      $('#pre-load-form').css('display', 'none');
     } else {
       $('#form-etap-2, #form-etap-3').css('display', 'none');
+      $('#pre-load-form').css('display', 'block');
       $('#inscricao input#possui_motocicleta').prop('checked', false);
       $('#lnk-nao-possui').click();
     }
