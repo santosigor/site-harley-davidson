@@ -1,7 +1,7 @@
 footer {
 	background: $black;
 	color: $white;
-  padding: 56px 0;
+  padding: 140px 0;
   .font-size-1 {
 		font-size: 1.3em;
 	}
@@ -25,6 +25,12 @@ footer {
 
 // responsive
 
+@media (min-width: 1366.98px) {
+	footer {
+		padding: 180px 0;
+	}
+}
+
 @media (max-width: 1366px) {
 	
 }
@@ -34,9 +40,13 @@ footer {
 }
 
 @media (max-width: 1024px) {
-
+	footer {
+	  padding: 100px 0;
+	}
 }
 
 @media (max-width: 768px) {
-	
+	footer {
+	  padding: 56px 0;
+	}
 }
