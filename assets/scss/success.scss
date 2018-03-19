@@ -1,6 +1,7 @@
 @import "fonts";
 @import "variables";
 @import "utilities";
+@import "navbar";
 @import "content";
 
 body.bd-success {
@@ -17,127 +18,137 @@ body.bd-success {
 // responsive
 
 @media (min-width: 1366.98px) {
-	.img-header {
-		max-width: 182px;
-    margin: 0 auto;
-    margin-top: 27px;
-    margin-bottom: 49px;
-	}
-	.font-size-1 {
-		font-size: 5.4em;
-		margin-bottom:22px;
-	}
-	.font-size-2 {
-		font-size: 1.9em;
-    letter-spacing: 2px;
-    line-height: 1.2em;
-    margin-bottom: 32px;
-	}
-	.font-size-3 {
-    font-size: .7em;
-    line-height: 12px;
-	}
-	.bt {
-    margin-bottom: 48px;
-	}
-	.footer-success {
-		max-width: 474px;
-		margin: 0 auto;
-		margin-bottom:47px;
-		color:#777575;
-		img {
-			margin-bottom:12px;
+	body.bd-success {
+		.img-header {
+			max-width: 182px;
+	    margin: 0 auto;
+	    margin-top: 27px;
+	    margin-bottom: 49px;
+		}
+		.font-size-1 {
+			font-size: 5.4em;
+			margin-bottom:22px;
+		}
+		.font-size-2 {
+			font-size: 1.9em;
+	    letter-spacing: 2px;
+	    line-height: 1.2em;
+	    margin-bottom: 32px;
+		}
+		.font-size-3 {
+	    font-size: .7em;
+	    line-height: 12px;
+		}
+		.bt {
+	    margin-bottom: 48px;
+		}
+		.footer-success {
+			max-width: 474px;
+			margin: 0 auto;
+			margin-bottom:47px;
+			color:#777575;
+			img {
+				margin-bottom:12px;
+			}
 		}
 	}
 }
 
 @media (max-width: 1366px) {
-	.img-header {
-		max-width: 155px;
-		margin:0 auto;
-		margin-top: 11px;
-		margin-bottom: 44px;
-	}
-	.font-size-1 {
-		font-size: 4.6em;
-		margin-bottom:22px;
-	}
-	.font-size-2 {
-		font-size: 1.62em;
-    letter-spacing: 2px;
-    line-height: 1.1em;
-    margin-bottom: 31px;
-	}
-	.font-size-3 {
-    font-size: .8em;
-	}
-	.bt {
-		margin-top:0;
-		padding: 0.8rem 3.8rem 0.8rem 1rem;
-		font-size: .9em;
-    margin-bottom: 40px;
-		&:before {
-			margin-top: -7px;
+	body.bd-success {
+		.img-header {
+			max-width: 155px;
+			margin:0 auto;
+			margin-top: 11px;
+			margin-bottom: 44px;
 		}
-	}
-	.footer-success {
-		max-width: 522px;
-		margin: 0 auto;
-		margin-bottom:50px;
-		color:#777575;
-		img {
-			margin-bottom:24px;
+		.font-size-1 {
+			font-size: 4.6em;
+			margin-bottom:22px;
+		}
+		.font-size-2 {
+			font-size: 1.62em;
+	    letter-spacing: 2px;
+	    line-height: 1.1em;
+	    margin-bottom: 31px;
+		}
+		.font-size-3 {
+	    font-size: .8em;
+		}
+		.bt {
+			margin-top:0;
+			padding: 0.8rem 3.8rem 0.8rem 1rem;
+			font-size: .9em;
+	    margin-bottom: 40px;
+			&:before {
+				margin-top: -7px;
+			}
+		}
+		.footer-success {
+			max-width: 522px;
+			margin: 0 auto;
+			margin-bottom:50px;
+			color:#777575;
+			img {
+				margin-bottom:24px;
+			}
 		}
 	}
 }
 
 @media (max-width: 1280px) {
-	.img-header {
-		max-width: 140px;
-		margin-bottom: 41px;
-	}
-	.font-size-1 {
-		font-size: 4.4em;
-		margin-bottom:16px;
-	}
-	.font-size-2 {
-		font-size: 1.45em;
-    line-height: 1.2em;
-	}
-	.bt {
-    margin-bottom: 30px;
+	body.bd-success {
+		.img-header {
+			max-width: 140px;
+			margin-bottom: 41px;
+		}
+		.font-size-1 {
+			font-size: 4.4em;
+			margin-bottom:16px;
+		}
+		.font-size-2 {
+			font-size: 1.45em;
+	    line-height: 1.2em;
+		}
+		.bt {
+	    margin-bottom: 30px;
+		}
 	}
 }
 
 @media (max-width: 1024px) {
-	.img-header {
-		max-width: 120px;
-		margin-bottom: 0;
-	}
-	.font-size-1 {
-		font-size: 3.5em;
-    margin-bottom: 9px;
-	}
-	.font-size-2 {
-		font-size: 1.2em;
-    margin-bottom: 20px;
-	}
-	.bt {
-    margin-bottom: 20px;
-	}
-	.font-size-3 {
-    line-height: 14px;
+	body.bd-success {
+		.img-header {
+			max-width: 120px;
+			margin-bottom: 0;
+		}
+		.font-size-1 {
+			font-size: 3.5em;
+	    margin-bottom: 9px;
+		}
+		.font-size-2 {
+			font-size: 1.2em;
+	    margin-bottom: 20px;
+		}
+		.bt {
+	    margin-bottom: 20px;
+		}
+		.font-size-3 {
+	    line-height: 14px;
+		}
 	}
 }
 
 @media (max-width: 768px) {
-	.img-header {
-		margin-bottom: 20px;
-	}
-	.font-size-1 {
-		font-size: 3em;
-	}
-	.font-size-2 {
-		font-size: 1em;
+	body.bd-success {
+		.img-header {
+			margin-bottom: 20px;
+		}
+		.font-size-1 {
+			font-size: 3em;
+		}
+		.font-size-2 {
+			font-size: 1em;
+		}
 	}
 }

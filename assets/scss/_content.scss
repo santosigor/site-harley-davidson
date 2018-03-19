@@ -47,13 +47,24 @@ b, strong {
     appearance: none;
     background: #fff url(../../images/select-arrow.jpg) no-repeat right center;
     cursor: pointer;
-    background-position-x: 320px;
+    background-position-x: 96%;
 	}
 }
 
 
 a, button {
 	outline: none!important;
+}
+
+.lnk {
+	color:$black;
+	text-decoration:underline;
+	&.white {
+		color:$white;
+	}
+	&:hover {
+		color:$orange;
+	}
 }
 
 // responsive
@@ -72,6 +83,9 @@ a, button {
 	.container-fluid {
 		max-width: 1070px;
 		margin:0 auto;
+	}
+	.section-container {
+		padding: 90px 0;
 	}
 }
 
