@@ -9,7 +9,6 @@
 body.home {
 	header {
 		position:relative;
-		@extend %heightPattern;
 		padding: 15px 0 100px 0;
 		.dots {
 			position: absolute;
@@ -64,16 +63,6 @@ body.home {
 				}
 			}
 		}
-		nav {
-			margin-bottom:90px;
-			.social-icons {
-				margin-top:18px;
-				a {
-					display: inline-block;
-					margin:0 15px;
-				}
-			}
-		}
 		.text-header {
 			color: $white;
 			max-width:588px;
@@ -121,8 +110,7 @@ body.home {
 		padding:0;
 		iframe {
 			width:100%;
-			@extend %heightPattern; 
-			//min-height: 595px;
+			min-height: 595px;
 		}
 	}
 }

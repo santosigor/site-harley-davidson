@@ -21,7 +21,6 @@ b, strong {
 }
 
 .section-container {
-	@extend %heightPattern;
 	padding: 140px 0;
 }
 
@@ -58,3 +57,41 @@ a, button {
 }
 
 // responsive
+
+@media (min-width: 1366.98px) {
+	.container-fluid {
+		max-width: 1114px;
+		margin:0 auto;
+	}
+	.section-container {
+		padding: 100px 0;
+	}
+}
+
+@media (max-width: 1366px) {
+	.container-fluid {
+		max-width: 1070px;
+		margin:0 auto;
+	}
+}
+
+@media (max-width: 1280px) {
+	.container-fluid {
+		max-width: 985px;
+		margin:0 auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.container-fluid {
+		max-width: 790px;
+		margin:0 auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.container-fluid {
+		max-width: 595px;
+		margin:0 auto;
+	}
+}
