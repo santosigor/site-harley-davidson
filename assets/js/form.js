@@ -105,10 +105,6 @@ function Inscricao(){
     erro=true;
     texto += '<p>Erro: O CAMPO <b>SOBRENOME</b> NÃO FOI PREENCHIDO*';
   }
-  if(d.data_nascimento.value==""){
-    erro=true;
-    texto += '<p>Erro: O CAMPO <b>DATA DE NASCIMENTO</b> NÃO FOI PREENCHIDO*';
-  }
   if(d.email.value==""){
     erro=true;
     texto += '<p>Erro: O CAMPO <b>E-MAIL</b> NÃO FOI PREENCHIDO*';
@@ -129,6 +125,10 @@ function Inscricao(){
     erro=true; 
     texto += '<p>Erro: O CAMPO <b>CONCESSIONÁRIA</b> NÃO FOI PREENCHIDO*';
   }
+  if(d.data_nascimento.value==""){
+    erro=true;
+    texto += '<p>Erro: O CAMPO <b>DATA DE NASCIMENTO</b> NÃO FOI PREENCHIDO*';
+  }
   if(d.possui_motocicleta.value == "undefined" || d.possui_motocicleta.value == ""){
     erro=true; 
     texto += '<p>Erro: O CAMPO <b>POSSUI MOTOCICLETA?</b> NÃO FOI PREENCHIDO*';
@@ -138,7 +138,7 @@ function Inscricao(){
         erro=true; 
         texto += '<p>Erro: O CAMPO <b>MARCA</b> NÃO FOI PREENCHIDO*';
       } 
-      if(d.modelo.value == "0"){
+      if(d.modelo.value == ""){
         erro=true; 
         texto += '<p>Erro: O CAMPO <b>MODELO</b> NÃO FOI PREENCHIDO*';
       } 
@@ -150,13 +150,27 @@ function Inscricao(){
       } 
     }
   }
-  if($('input[name=contatado]:checked').is(':checked') == false && $('input[name=contatado2]:checked').is(':checked')  == false){
+  if(d.contatado.value == "undefined" || d.contatado.value == ""){
     erro=true; 
     texto += '<p>Erro: O CAMPO <b>De que forma prefere ser contatado?</b> NÃO FOI PREENCHIDO*';
+  }
+  if($('input[name=dados]:checked').is(':checked') == false){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>Concordo que os dados ora fornecidos...</b> NÃO FOI PREENCHIDO*';
+  }
+  if($('input[name=regulamento]:checked').is(':checked') == false){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>Confirmo eu li...</b> NÃO FOI PREENCHIDO*';
   } 
+  if($('input[name=agendamento]:checked').is(':checked') == false){
+    erro=true; 
+    texto += '<p>Erro: O CAMPO <b>Estou ciente de que...</b> NÃO FOI PREENCHIDO*';
+  }   
   if (erro) {
      $('#info-campo-vazio').html(texto).css('display', 'block');
   } else {
+    //Pixel de Conversão
+    fbq('track', 'CompleteRegistration', { value: 25.00, currency: 'USD' });
     d.submit();
   }
 }

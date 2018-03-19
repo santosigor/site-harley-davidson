@@ -3,13 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>115 anos | Harley Davidson</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16">
     <meta name="keywords" content="Harley-Davidson,Harley,H-D,HD, motocicletas Harley-Davidson, motocicletas Harley, motos Harley, Harley-Davidson Motor Company"/>
     <meta name="description" content="Inscreva-se na promoção e concorra a uma viagem para Praga, República Tcheca, para comemorar os 115 anos da H-D."/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css">
     <link rel="stylesheet" href="assets/css/form.css">
-    <title>115 anos | Harley Davidson</title>
+    <!-- Admotion - Adserver -->
+    <!-- IMAGE TAG -->
+    <IMG SRC="https://ia.nspmotion.com/ptag/?pt=21343&r=[timestamp]" WIDTH="1" HEIGHT="1" ALT="" class="image-tag"/>
+    <!-- END IMAGE TAG -->
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1949535428665397');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1949535428665397&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
   </head>
   <body class="form">
 
@@ -68,7 +87,7 @@
                     <div class="campo">
                       <label class="d-block">CPF</label>
                       <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" onblur="ValidaCPF(this.value);" onkeyup="mascaraTexto(event,'999.999.999-99');" maxlength="14">
-                      <span class="campo-invalido" id="cpf_invalido">CPF inválido!</span>
+                      <span class="campo-invalido" id="cpf_invalido">“CPF inválido!</span>
                     </div>
                     <div class="campo">
                       <label class="d-block">NOME</label>
@@ -77,10 +96,6 @@
                     <div class="campo">
                       <label class="d-block">SOBRENOME</label>
                       <input name="sobrenome" type="text" placeholder="Sobrenome" maxlength="300">
-                    </div>
-                    <div class="campo">
-                      <label class="d-block">DATA DE NASCIMENTO</label>
-                      <input name="data_nascimento" type="text" placeholder="DD-MM-YYYY" onkeyup="mascaraTexto(event,'99-99-9999');" maxlength="10">
                     </div>
                     <div class="campo">
                       <label class="d-block">E-MAIL</label>
@@ -142,6 +157,10 @@
                       </select>
                     </div>
                     <div class="campo">
+                      <label class="d-block">DATA DE NASCIMENTO</label>
+                      <input name="data_nascimento" type="text" placeholder="DD-MM-YYYY" onkeyup="mascaraTexto(event,'99-99-9999');" maxlength="10">
+                    </div>
+                    <div class="campo">
                       <label class="d-block">POSSUI MOTOCICLETA?</label>
                       <div class="pretty p-default">
                         <input type="radio" name="possui_motocicleta" id="possui_motocicleta" value="1">
@@ -172,14 +191,7 @@
                       </div>
                       <div class="campo">
                         <label class="d-block">MODELO</label>
-                        <select name="modelo" id="modelo">
-                          <option value="0">Modelo</option>
-                          <option value="">Modelo</option>
-                          <option value="">Modelo</option>
-                          <option value="">Modelo</option>
-                          <option value="">Modelo</option>
-                          <option value="">Modelo</option>
-                        </select>
+                        <input name="modelo" type="text" placeholder="Modelo" maxlength="200">
                       </div>
                     </div>
                     <div id="pretende_comprar">
@@ -226,13 +238,13 @@
                     <div class="campo">
                       <label class="d-block lb-mg-custom">De que forma prefere ser contatado?</label>
                       <div class="pretty p-default d-block pret-wd-custom">
-                        <input type="checkbox" name="contatado">
+                        <input type="radio" name="contatado" value="1">
                         <div class="state">
                           <label>E-MAIL</label>
                         </div>
                       </div>
                       <div class="pretty p-default d-block pret-wd-custom">
-                        <input type="checkbox" name="contatado2">
+                        <input type="radio" name="contatado" value="2">
                         <div class="state">
                           <label>TELEFONE/CELULAR</label>
                         </div>
@@ -262,7 +274,7 @@
                           <input type="checkbox" name="regulamento"/>
                           <div class="state"><label></label></div>
                         </div>
-                        <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
+                        <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no<br> <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
                       </div>
                     </div>
                     <div class="campo">
@@ -271,7 +283,7 @@
                           <input type="checkbox" name="agendamento"/>
                           <div class="state"><label></label></div>
                         </div>
-                        <span class="d-block font-noto-sans">Estou ciente de que o agendamento de test ride, o recebimento de envio de convite para test ride e a realização de test ride não são obrigatórios para participação na promoção; que, ao aceitar os termos do <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk-regulamento">regulamento</a>, aceito receber convite para um futuro test ride em 2018, via e-mail ou telefone/celular. Estou ciente de que é possível que não exista uma concessionária próxima à minha localidade para agendamento de test ride.</span>
+                        <span class="d-block font-noto-sans">Estou ciente de que o agendamento de test ride, o recebimento de envio de convite para test ride e a realização de test ride não são obrigatórios para participação na promoção; que, ao aceitar os termos do <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk">regulamento</a>, aceito receber convite para um futuro test ride em 2018, via e-mail ou telefone/celular. Estou ciente de que é possível que não exista uma concessionária próxima à minha localidade para agendamento de test ride.</span>
                       </div>
                     </div>
                     <a href="javascript:Inscricao();" class="bt icon-ht bg-orange-3">FAZER A INSCRIÇÃO</a>
@@ -323,18 +335,20 @@
 
     <!-- modalNaoPossuiCNH -->
     <div class="modal fade" id="modalNaoPossuiCNH" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true" class="font-noto-sans-bold">FECHAR <b>X</b></span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <p class="font-size-nao-pode-participar font-noto-sans-bold">
-              Desculpe. Infelismente,<br>sem a CNH para motocicleta,<br>você não poderá participar<br>dessa promoção.
-            </p>
-            <a href="https://www.harley-davidson.com/" target="_blank" class="bt icon-ht bg-orange-2">ACESSE O SITE DA H-D<sup>®</sup></a>
+          <div class="modal-container">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" class="font-noto-sans-bold">FECHAR <b>X</b></span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p class="font-size-nao-pode-participar font-noto-sans-bold">
+                Desculpe. Infelizmente,<br>sem a CNH para motocicleta,<br>você não poderá participar<br>dessa promoção.
+              </p>
+              <a href="https://www.harley-davidson.com/" target="_blank" class="bt icon-ht bg-orange-2">ACESSE O SITE DA H-D<sup>®</sup></a>
+            </div>
           </div>
         </div>
       </div>
@@ -342,316 +356,318 @@
 
     <!-- modalRegulamento -->
     <div class="modal fade" id="modalRegulamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true" class="font-noto-sans-bold">FECHAR <b>X</b></span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="font-cheddar-gothic-sans title-regulamento text-center">
-              Regulamento
-            </p>
-            <div class="reg-scroll">
-              <div class="text-center">
-                <p>
-                  REGULAMENTO DA PROMOÇÃO COMERCIAL<br>"PROMOÇÃO 115 ANOS DA H-D EM PRAGA"
-                </p>
-              </div>
-              <p>
-                A Promoção "<b>115</b> ANOS DA <b>H-D</b> EM <b>PRAGA”</b> <b>("Promoção")</b>, na modalidade sorteio, será promovida por Harley-Davidson do Brasil Ltda., nome fantasia "Harley-Davidson", doravante denominada "<b>Promotora</b>", com sede na Cidade de Manaus, Estado do Amazonas, na Avenida do Turismo, 2.539, Ponta Negra, CEP 69037-005 e inscrita no CNPJ/MF sob o nº. 02.273.580/0001-16.
+          <div class="modal-container">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" class="font-noto-sans-bold">FECHAR <b>X</b></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="font-cheddar-gothic-sans title-regulamento text-center">
+                Regulamento
               </p>
-              <ol>
-                <li>
-                  <p><b>CONDIÇÕES GERAIS</b></p>
-                  <p>
-                    Observado o período de participação, para participar da Promoção basta que o participante <b>(“Participante”)</b> preencha o cadastro online no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>, incluindo consentimento para poder receber um convite, via e-mail ou contato telefônico, pela Promotora, de um eventual futuro “test ride” não obrigatório, neste ano de 2018, de uma das motocicletas da marca Harley-Davidson disponíveis em uma de suas concessionárias representantes da marca Harley-Davidson, podendo participar apenas pessoas residentes e domiciliadas em território brasileiro e que possuam carteira de habilitação específica e válida para condução de motocicletas. Caso o participante eventualmente receba um convite para test ride, deve consultar a Concessionária da marca Harley-Davidson mais próxima de sua localidade para receber informação sobre as concessionárias participantes.
-                  </p>
-                  <p>
-                    Entende-se por test ride o ato não obrigatório e/ou vinculativo de conduzir um dos veículos (motocicletas) da marca Harley-Davidson que sejam objeto do test ride em uma das unidades das concessionárias da marca Harley-Davidson, após recebimento e aceite não obrigatório de convite para tanto. O test-drive terá duração de tempo determinado pelo representante legal de uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção, conforme veículo a ser indicado por referido representante legal no momento de visita a uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção.
-                  </p>
-                  <p>
-                    Entende-se por test ride o ato não obrigatório e/ou vinculativo de conduzir um dos veículos (motocicletas) da marca Harley-Davidson que sejam objeto do test ride em uma das unidades das concessionárias da marca Harley-Davidson, após recebimento e aceite não obrigatório de convite para tanto. O test-drive terá duração de tempo determinado pelo representante legal de uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção, conforme veículo a ser indicado por referido representante legal no momento de visita a uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção.
-                  </p>
-                  <p>
-                    Para que o Participante vencedor da Promoção e seu acompanhante possam usufruir da viagem em questão, deverão estes possuir passaporte e visto válidos de modo a possibilitar a viagem a Praga, República Checa. A Promotora não se responsabiliza por eventuais dificuldades na obtenção desses documentos.
-                  </p>
-                </li>
-                <li>
-                  <p><b>DATA DE INÍCIO E DE TÉRMINO DA PROMOÇÃO</b></p>
-                  <p>
-                    A <b>Promoção</b> terá início no dia <b>02 de abril de 2018</b> e término no dia <b>13 de maio de 2018</b>.
-                  </p>
-                </li>
-                <li>
-                  <p><b>PERÍODO DE PARTICIPAÇÃO</b></p>
-                  <p>
-                    O período de participação da <b>Promoção</b> se inicia a partir das 00:00 horas do dia 02 de abril de 2018 e se estende até às 23:59 horas do dia 13 de maio de 2018, horário oficial de Brasília.
-                  </p>
-                </li>
-                <li>
-                  <p><b>QUEM PODE PARTICIPAR</b></p>
-                  <p>
-                    A participação na <b>Promoção</b> é voluntária, a qualquer pessoa física, maior de 18 anos, capaz, residente e domiciliada em território brasileiro <b>que efetuar o cadastro no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>, autorizando eventual recebimento de convite da Promotora para um test ride não obrigatório de veículo (motocicleta) da marca Harley-Davidson em uma das concessionárias representantes da marca Harley-Davidson, conforme informações determinadas neste regulamento.</b>
-                  </p>
-                  <p>
-                    <b>Não podem participar:</b> pessoas incapazes, <b><u>pessoas sem a devida habilitação / licença específica e válida para condução de motocicleta</u></b>, pessoas jurídicas, funcionários, diretores, acionistas, sócios e colaboradores da <b>Promotora</b> e das unidades das concessionárias representantes da marca Harley-Davidson, empresas controladas ou coligadas, distribuidores, prestadores de serviços e fornecedores e/ou quaisquer outras empresas envolvidas na presente Promoção.
-                  </p>
-                  <p>
-                    <b>A participação na Promoção não é automática.</b> A participação depende que o Participante se inscreva, ao longo do período da Promoção, com seus dados em <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a> e aceite receber, eventualmente, um futuro convite pela <b>Promotora</b> de um test ride, não obrigatório, neste ano de 2018.
-                  </p>
-                </li>
-                <li>
-                  <p><b>MODO DE PARTICIPAÇÃO</b></p>
-                  <p>
-                    A participação na <b>Promoção</b> ocorre nos termos da descrição do presente item. É condição de participação na <b>Promoção</b> o cadastro no website e concordância em recebimento de futuro convite, neste ano de 2018, para test ride, em relação a uma das unidades das concessionárias representantes da marca Harley-Davidson, conforme especificação no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>. Caso receba um convite para test ride em uma das concessionárias participantes da Promoção, o Participante poderá checar os horários e datas disponíveis para test ride na concessionária representante da marca Harley-Davidson mais próxima à sua localidade.
-                  </p>
-                  <p>
-                    No ato da inscrição no website indicado acima, e aceitação de recebimento de um futuro convite neste ano de 2018 para test ride, por meio de formulário eletrônico, o Participante concordará em receber contato, por telefone e/ou via SMS ou por e-mail, por parte da Promotora, de futuro convite neste ano de 2018 para test ride, conforme disponibilidade de dias, horários e de motocicletas em uma das concessionárias representantes da marca Harley-Davidson.
-                  </p>
-                  <p>
-                    No ato da inscrição no website indicado acima, e aceitação de recebimento de um futuro convite neste ano de 2018 para test ride, por meio de formulário eletrônico, o Participante concordará em receber contato, por telefone e/ou via SMS ou por e-mail, por parte da Promotora, de futuro convite neste ano de 2018 para test ride, conforme disponibilidade de dias, horários e de motocicletas em uma das concessionárias representantes da marca Harley-Davidson.
-                  </p>
-                  <p>
-                    O participante também deverá responder: (a) Se possui uma motocicleta. Em caso de resposta positiva, deverá inserir marca e modelo; (b) Caso a resposta seja negativa, deverá responder se pretende comprar uma e quando pretende fazer essa aquisição. 
-                  </p>
-                  <p>
-                    O participante deverá indicar se concorda com o compartilhamento dessas informações entre empresas do grupo da Promotora e relacionadas. Concluído o cadastro, será gerado número da sorte para participação no sorteio. Ao fazer referido cadastro, será gerado o elemento sorteável (número da sorte), com base nas especificações da Loteria Federal que também serão enviados no e-mail cadastrado na <b>Promoção</b>.
-                  </p>
-                  <p>
-                    Em caso de perda do número da sorte, que será enviado por e-mail, o Participante poderá, a qualquer tempo, até a data e horário do efetivo sorteio, requisitar um novo envio deste número via e-mail ou por meio do site da promoção, bastando, para tanto, preenchimento de formulário específico no website da promoção informando o seu nome e CPF.
-                  </p>
-                  <p>
-                    Será um único número sorteável (números da sorte) por participante (CPF/MF), vedado o cadastro de mais de um CPF para a presente Promoção.
-                  </p>
-                  <p>
-                    O não preenchimento ou preenchimento incorreto de qualquer um dos dados requeridos levará automaticamente ao cancelamento da participação, sem necessidade de prévia comunicação.
-                  </p>
-                  <p>
-                    É de responsabilidade do participante o correto preenchimento do cadastro, principalmente quanto aos dados que permitam sua identificação e localização completa, existência de carteira de motorista específica e válida para o veículo (motocicleta) escolhido, sob pena de desclassificação.
-                  </p>
-                  <p>
-                    A participação de pessoas impedidas de participar desta <b>Promoção</b>, quando identificadas, serão invalidadas e desclassificadas imediatamente, ficando sua colocação destinada ao próximo participante classificado, caso já tenha sido apurada, e o próximo participante tenha tempo hábil para participar.
-                  </p>
-                  <p>
-                    Ficam os Participantes cientes, desde já, que não poderão utilizar de meios escusos para se cadastrar no website de participação desta <b>Promoção</b> e/ou mecanismos que criem condições de cadastramento irregular, desleais ou que atentam contra os objetivos e condições de participação previstas neste Regulamento, que é o cadastramento no website e aceite em receber futuro convite para test ride, não obrigatório, neste ano de 2018, conforme descrito acima.
-                  </p>
-                  <p>
-                    Da mesma forma, não poderão os Participantes valerem-se de meios fraudulentos de modo a possibilitar que o sistema de internet relativo ao cadastro na promoção registre mais de um cadastro por pessoa física / CPF.
-                  </p>
-                  <p>
-                    A Comissão Julgadora da <b>Promoção</b> não se responsabilizará por falsas informações submetidas pelo participante quando de seu cadastramento na <b>Promoção</b>.
-                  </p>
-                  <p>
-                    Todo e qualquer participação nesse sentido será automaticamente desconsiderada e tornada nula quando da ciência da Comissão Julgadora da <b>Promoção</b> de que o participante não preenche as condições ora estabelecidas no parágrafo anterior, além dos demais requisitos previstos neste Regulamento.
-                  </p>
-                </li>
-                <li>
-                  <p><b>MECÂNICA DA PROMOÇÃO – SORTEIO E NÚMERO DA SORTE</b></p>
-                  <p>
-                    Para o sorteio, serão gerados 100.000 (cem mil) números da sorte, por sistema, os quais serão distribuídos de forma aleatória, equitativa e concomitante, distribuídos em uma única série, de acordo com o Inciso V, alínea “a”, do artigo 2°, da Portaria 41/08, do Ministério da Fazenda.
-                  </p>
-                  <p>
-                    Cada número da sorte será composto por 5 (cinco) algarismos subsequentes, que vão de 00000 a 99999 (distribuídos de forma sequencial, sem intervalos, de modo a se limitarem a quantia de 100.000 números da sorte) que representam a ordem que serão considerados para confronto com o resultado na Loteria Federal.
-                  </p>
-                  <ol>
-                    <li>
-                      <p><b>SORTEIO - FORMA DE APURAÇÃO DOS GANHADORES</b></p>
-                      <p>
-                        Os Ganhadores serão determinados com base na extração da Loteria Federal, considerando a extração da Loteria Federal do dia 16/05/2018, mediante a utilização dos algarismos das unidades simples do 1º ao 5° prêmio da Loteria Federal, lido de cima para baixo.
-                      </p>
-                      <p>
-                        Exemplo da Extração da Loteria Federal do Brasil:
-                      </p>
-                      <p>
-                        1º prêmio: 57.64<b>3</b><br>
-                        2º prêmio: 42.76<b>2</b><br>
-                        3º prêmio: 20.21<b>1</b><br>
-                        4º prêmio: 59.89<b>6</b><br>
-                        5º prêmio: 13.72<b>5</b>
-                      </p>
-                      <p>
-                        Nesse exemplo, o número da sorte obtido é <b>32165</b>. Esse número será utilizado para definir o ganhador.
-                      </p>
-                      <p>
-                        Será considerado ganhador com o prêmio descrito no item 7 o participante portador deste número da sorte.
-                      </p>
-                      <p>
-                        Caso o Número da Sorte contemplado não encontre correspondente nos Números da Sorte distribuídos, pelo fato de não ter sido atribuído a nenhum participante, será considerado contemplado o Número da Sorte distribuído imediatamente superior ou, na falta deste, ao Número da Sorte distribuído imediatamente inferior.
-                      </p>
-                      <p>
-                        Caso a extração da Loteria Federal aqui mencionada deixe de ser realizada na data prevista, será utilizado o resultado da próxima Extração da Loteria Federal que venha a ser realizada.
-                      </p>
-                      <p>
-                        Todos os participantes da Promoção serão gerenciados pelo sistema de empresa especializada para tanto, de forma integrada, de forma que os contemplados serão identificados através do banco de dados. O mesmo sistema fará a distribuição concomitante de números de ordem (números da sorte). Após a apuração, o mesmo sistema ainda promoverá a identificação dos ganhadores junto ao referido banco de dados.
-                      </p>
-                      <p>
-                        Serão sumariamente excluídos/desclassificados da presente Promoção os Participantes que cometerem qualquer tipo de fraude ou tentativa de fraude, inclusive ao sistema online de cadastro na Promoção, ficando estes, ainda, sujeitos à responsabilização penal e civil.
-                      </p>
-                      <p>
-                        Os números da sorte com os quais os Participantes estarão concorrendo aos prêmios serão disponibilizados via e-mail após o preenchimento do cadastro da campanha no site <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>. Em caso de perda do número da sorte, que será enviado por e-mail, o Participante poderá, a qualquer tempo, até a data e horário do efetivo sorteio, requisitar um novo envio deste número via e-mail ou por meio do site da promoção, bastando, para tanto, preenchimento de formulário específico no website da promoção informando o seu nome e CPF.
-                      </p>
-                      <p>
-                        Cada número da sorte será vinculado ao Titular do respectivo CPF indicado do cadastro.
-                      </p>
-                    </li>
-                  </ol>
-                </li>
-                <li>
-                  <p><b>PRÊMIOS</b></p>
-                  <p>
-                    Serão contemplados 1 (um) participante, com direito a 1 (um) acompanhante, com 1 (um) pacote de viagem, na classe econômica, para a Praga, capital da República Checa, para assistir o evento de comemoração dos 115 anos da <b>Promotora</b>, durante 7 (sete) dias com 6 (seis) noites no HOTEL CLARION CONGRESS HOTEL PRAGUE com quarto duplo tipo Standard, incluindo: <b>(i)</b> a data de embarque, que ocorrerá em 02/07/2018 e de retorno ao País, que ocorrerá em 09/07/2018, e <b>(ii)</b> 04 (quatro) dias de atividades no evento “<i>H-D 115th Prague anniversary</i>” <a href="https://h-d.prague115.com/" target="_blank" class="lnk white">https://h-d.prague115.com/</a> , doravante denominado "<b>Prêmio</b>".
-                  </p>
-                  <p>
-                    O <b>Prêmio</b> será composto por: <b>(i)</b> passagem aérea de ida e volta em classe econômica para o Participante e seu acompanhante, saindo do Brasil para a cidade de Praga, Capital da República Checa, e voltando deste último local para o Brasil; <b>(ii)</b> Hospedagem no HOTEL CLARION CONGRESS HOTEL PRAGUE ("<b>Hotel</b>"), localizado na 945/, Freyova 945/33, Vysočany, 190 00 Praha, Czechia, para 6 (seis) noites, entrada ("<b>check-in</b>") em 3 de julho de 2018 e saída ("<b>check-out</b>") em 9 de julho de 2018; <b>(iii)</b> 2 (dois) cupons (<b>“Cupons”</b>, ou, individualmente, <b>“Cupom”</b>) para a entrada no evento de 115º aniversário da Harley-Davidson em Praga, República Checa, durante os 4 dias de atividades, <b>(iv) 2</b> (dois) pacotes promocionais de produtos relacionados ao evento (“<b>Itens Promocionais</b>”), que serão entregues se o Participante vencedor da Promoção comparecer ao Hotel.
-                  </p>
-                  <p>
-                    Um pacote de Itens Promocionais inclui os seguintes produtos: <b>(i)</b> 1 (uma) camiseta contendo o logotipo do evento, <b>(ii)</b> 1 (um) patch contendo o logotipo do evento, <b>(iii)</b> 1 (uma) mochila de cordão contendo o logotipo do evento; <b>(iv)</b> 1 (um) pin contendo o logotipo do evento; <b>(v)</b> 1 (um) chaveiro contendo o logotipo do evento, (vi) 1 (um) impresso contendo parabenização por participação no evento e Cupom relacionado ao evento completo, contendo QR Code. A imagem abaixo ilustra as fotos de cada um desses itens mencionados:
-                  </p>
-                  <p>
-                    <img src="images/imagem-regulameto.jpg" alt="" class="img-fluid">
-                  </p>
-                  <p>
-                    Os Prêmios não contemplarão eventuais despesas do contemplado e seu acompanhante, tais como, mas não limitados a: <b>(i)</b> alimentação, <b>(ii)</b> seguro-viagem, <b>(iii)</b> seguro-saúde, <b>(iv)</b> seguro de vida, <b>(v)</b> gastos com transporte interno no país onde ocorrerá o evento, <b>(vi)</b> quaisquer gastos não previstos na presente promoção, <b>(vii)</b> consumo de bebidas alcoólicas; <b>(viii)</b> ligações telefônicas, locais, interurbanas ou internacionais; <b>(ix)</b> acesso à internet; <b>(x)</b> uso de cofre; <b>(xi)</b> consumo de produtos do frigobar; <b>(xii)</b> uso de serviços oferecidos pelo hotel, tais como, lavanderia, spa, restaurante, cassino, entre outros; <b>(xiii)</b> custos relacionados ao excesso de bagagem no transporte aéreo e terrestre, incluindo Duty Free e eventuais impostos; <b>(xiv)</b> early check in e late check out; e <b>(xv)</b> todos aqueles itens que não estejam expressamente incluídos na descrição do prêmio acima e, posteriormente na "Carta Compromisso".
-                  </p>
-                  <p>
-                    Os <b>Prêmios</b> distribuídos nesta promoção serão entregues conforme as condições e características indicadas neste instrumento, sendo vedadas quaisquer alterações por parte dos contemplados seja por meio de adições, exclusões ou substituições dos itens que os compõem.
-                  </p>
-                  <p>
-                    O valor estimado individual do prêmio é de R$ 6.315,00 (seis mil trezentos e quinze reais) - o pacote. O Valor Total dos Prêmios corresponde a R$ 12.630,00 (Doze mil seiscentos e trinta reais), em relação aos quais aproximadamente R$ 630,00 (seiscentos e trinta reais) se referem ao valor do pacote de Itens Promocionais, aproximadamente R$ 4.000,00 (quatro mil reais) se referem ao valor de hospedagem e aproximadamente R$ 8.000,00 (oito mil reais) se referem ao valor de passagens aéreas.
-                  </p>
-                  <p>
-                    <b>
-                      A obtenção e a apresentação dos documentos necessários à fruição dos pacotes de viagem, objetos da distribuição gratuita nesta Promoção, incluindo, mas não se limitando, a carteira de motorista válida para condução de motocicletas, passaporte válido e visto de entrada no país, serão de exclusiva responsabilidade do contemplado e seu acompanhante.
-                    </b>
-                  </p>
-                  <p>
-                    Caso o contemplado e seu acompanhante não obtenham, por qualquer razão, os referidos documentos, perderão direito ao recebimento do prêmio e o valor correspondente será recolhido ao Tesouro Nacional, como renda da União, pela <b>Promotora</b>.
-                  </p>
-                  <p>
-                    <b>
-                      Os prêmios oferecidos gratuitamente nesta Promoção não poderão ser convertidos em dinheiro, conforme disposto no §3º do artigo 1º da Lei nº. 5.768/1971, tampouco substituídos por quaisquer outros bens, serviços ou direitos de valor igual ou semelhante.
-                    </b>
-                  </p>
-                  <p>
-                    <b>
-                      Não são objetos de premiação os itens vedados no artigo 10° do Decreto 70.951/72, quais sejam: medicamentos, armas e munições, explosivos, fogos de artifício ou de estampido, bebidas alcóolicas, fumos e seus derivados.
-                    </b>
-                  </p>
-                  <p>
-                    A premiação é pessoal e intransferível, não sendo admitida sua negociação ou substituição por outra espécie de bem ou serviços, endosso ou conversão em dinheiro.
-                  </p>
-                </li>
-                <li>
-                  <p><b>APURAÇÃO DO RESULTADO E EXIBIÇÃO DO PRÊMIO</b></p>
-                  <p>
-                    A apuração do ganhador será realizada com base em resultado da Loteria Federal, extração do dia 16/05/2018. 
-                  </p>
-                  <p>
-                    <b>Exibição dos Prêmios:</b> Em virtude da natureza dos prêmios "Pacotes de viagens”, não haverá exibição física dos prêmios.
-                  </p>
-                  <p>
-                    A <b>Promotora</b> comprovará a propriedade dos prêmios em até 08 (oito) dias antes da data da apuração, por meio de contrato de prestação de serviços firmado com agência de turismo ou recibo de depósito caução no valor dos prêmios, além de nota fiscal, contrato, recibo e/ou termo de doação. Tais comprovantes ficarão disponíveis no estabelecimento da Promotora, no endereço indicado acima, para eventual processo de fiscalização e, posteriormente, será enviado para a Caixa, anexado ao processo de prestação de contas, nos termos dos artigos 5° e 15º do Decreto 70.951/72.
-                  </p>
-                </li>
-                <li>
-                  <p><b>DIVULGAÇÃO DO RESULTADO E ENTREGA DO PRÊMIO</b></p>
-                  <p>
-                    O resultado da <b>Promoção</b> será divulgado no dia: 17/05/2018 às 16h00 (Dezesseis) horas, por meio do site da <b>Promoção</b> <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>
-                  </p>
-                  <p>
-                    Além da divulgação no site, os participantes ganhadores serão informados diretamente do resultado, em até 7 (sete) dias, por meio de contato telefônico e e-mail fornecido pelo participante no ato do cadastro.
-                  </p>
-                  <p>
-                    O Prêmio deverá ser usufruído pelo ganhador e seu acompanhante no período de 02/07/2018 (embarque) a 09/07/2018 (retorno) em decorrência de horários e dias de funcionamento do evento H-D 115th Prague event, localizado em Praga, capital da República Checa.
-                  </p>
-                  <p>
-                    Em até 30 (trinta) dias contados da data do término da apuração, no <u>local escolhido pelo participante</u>, a Promotora entregará ao ganhador o voucher do pacote de viagem e os Itens Promocionais, por meio de Carta de Compromisso, sem nenhum ônus, contendo todas as informações relativas à viagem. Os Itens Promocionais, no entanto, serão recebidos no Hotel, na data de chegada no Hotel. Assim, o não comparecimento ao Hotel / não comparecimento à viagem acarreta na perda do direito de recebimento dos Itens Promocionais. 
-                  </p>
-                  <p>
-                    Quando da entrega da Carta de Compromisso, o ganhador deverá estar munido de seus documentos pessoais (RG e CPF) e deverá assinar um termo de quitação e entrega de Prêmio, para recebimento do prêmio. 
-                  </p>
-                </li>
-                <li>
-                  <p><b>DISPOSIÇÕES GERAIS</b></p>
-                  <p>
-                    O ganhador terá até 180 (cento e oitenta) dias, contados do término do prazo da <b>Promoção</b> para reclamar o prêmio. Não reclamado dentro desse prazo, caducará o direito do respectivo titular e o valor correspondente será recolhido, pela empresa autorizada, ao Tesouro Nacional, como renda da União, no prazo de 10 (dez) dias, nos termos do artigo 6º do Decreto 70.951/1972.
-                  </p>
-                  <p>
-                    Até 20 (vinte) dias antes do embarque, o ganhador e acompanhante deverão providenciar todos os documentos necessários para a realização da sua viagem, sendo que, posteriormente, os bilhetes aéreos e os vouchers lhes serão enviados.
-                  </p>
-                  <p>
-                    É de total responsabilidade dos ganhadores e acompanhantes a obtenção de passaporte, vistos e demais providências ou documentos que se façam necessários para a realização da viagem.
-                  </p>
-                  <p>
-                    A <b>Promotora</b> não se responsabilizará pela autenticidade dos dados fornecidos pelos participantes no ato de inscrição, ou pelo fornecimento de informações incorretas, imprecisas ou incompletas, que impossibilitem qualquer contato com os ganhadores. 
-                  </p>
-                  <p>
-                    A <b>Promotora</b> não se responsabilizará por uma eventual negação da entrada do ganhador e/ou de seus acompanhantes no País de destino, por parte do Consulado ou das Autoridades Migratórias daquele País, bem como por qualquer ato que estes venham a cometer em afronta aos bons costumes, à  moral, e às leis, por quaisquer atos danosos causados que os ganhadores e/ou acompanhantes cometerem ou vierem a ser vítimas e suas consequências, durante a viagem, incluindo, mas não limitando eventuais responsabilizações civis ou criminais.
-                  </p>
-                  <p>
-                    Os participantes da <b>Promoção</b> assumem total e exclusiva responsabilidade por eventuais violações à intimidade, privacidade, honra e imagem de qualquer pessoa, a deveres de segredo, à propriedade industrial, direito autoral e/ou a quaisquer outros bens juridicamente protegidos, eximindo a <b>Promotora</b> de quaisquer responsabilidades relativamente a tais fatos, aspectos, direitos e/ou situações.
-                  </p>
-                  <p>
-                    Caso algum acompanhante, indicado pelo ganhador, seja menor de idade, será de responsabilidade exclusiva do ganhador a obtenção de autorizações necessárias para viagem, nos termos previstos no Estatuto da Criança e Adolescente (Lei 8069/90).
-                  </p>
-                  <p>
-                    Em caso de dúvidas a respeito da presente <b>Promoção</b>, os participantes poderão contatar a <b>Promotora</b> por meio do e-mail sac@harley-davidson.com.br ou através do telefone 0800-724-1188. 
-                  </p>
-                  <p>
-                    Quaisquer dúvidas, divergências ou situações não previstas neste Regulamento serão julgadas e decididas de forma soberana e irrecorrível pela <b>Promotora</b> e, posteriormente, submetidas à CEPCO/CAIXA. O PROCON local, bem como os órgãos conveniados, em cada jurisdição receberão as reclamações devidamente fundamentadas, dos participantes.
-                  </p>
-                  <p>
-                    Caso seja verificada qualquer fraude, dados incorretos no cupom ou quaisquer outras divergências, incompatíveis com os termos deste Regulamento, o participante ganhador cuja irregularidade for verificada, será excluído automaticamente da <b>Promoção</b> Comercial, sendo o prêmio transferido ao próximo participante colocado, o qual teve as condições declaradas válidas.
-                  </p>
-                  <p>
-                    A <b>Promotora</b> se reserva o direito de, a seu exclusivo critério, alterar os termos neste Regulamento garantida a divulgação de forma eficaz e sempre buscando assegurar sua legalidade sem prejuízo de seus participantes.
-                  </p>
-                  <p>
-                    A simples participação desta <b>Promoção</b> Comercial, através do envio do cadastramento no site da <b>Promoção</b>, implica no conhecimento e total aceitação deste Regulamento.
-                  </p>
-                  <p>
-                    Os casos omissos serão esclarecidos e dirimidos por representantes da Organização da <b>Promoção</b>, membros da Comissão Julgadora, cujas decisões são soberanas e irrecorríveis.
-                  </p>
-                  <p>
-                    A participação nesta <b>Promoção</b> Comercial não gerará ao participante e/ou ganhador nenhum outro direito ou vantagem que não esteja expressamente prevista neste Regulamento.
-                  </p>
-                  <p>
-                    O Regulamento está disponível no site [<a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>] e nas lojas participantes, sendo que a simples participação implica na aceitação total e irrestrita de todos os seus itens.
-                  </p>
-                </li>
-                <li>
-                  <p><b>DIREITO DE IMAGEM</b></p>
-                  <p>
-                    O ganhador e/ acompanhante autorizam a <b>Promotora</b>, em caráter gratuito, não exclusivo, irrevogável, a usar seu nome civil completo ou abreviado, sua imagem, sua voz, profissão e demais dados em entrevistas em todos e quaisquer materiais, suportes, ações, meios de comunicação, exclusivamente para a divulgação da <b>Promoção</b>, pelo período de até 1 (um) ano, a partir da data da divulgação dos resultados.
-                  </p>
-                  <p>
-                    Nada neste instrumento será interpretado como imputando à Organização da <b>Promoção</b> a obrigação de retirar qualquer obra ou material de circulação ou do mercado que utilize a Imagem do participante após o término da presente autorização, desde que estes já tenham sido colocados no mercado pela <b>Promotora</b> ou por terceiros por ela contratados, dentro do período de vigência da referida autorização, respeitando-se assim os direitos de exaustão sobre tais materiais.
-                  </p>
-                  <p>
-                    O participante reconhece e concorda que outros terceiros, quando da cobertura ou divulgação da <b>Promoção</b> ao público, poderão vir a, ocasionalmente, retratar parte ou o todo de sua Imagem e que tal utilização sob nenhuma hipótese será atribuída ou gerará qualquer responsabilidade à <b>Promotora</b> e suas empresas do mesmo grupo econômico. 
-                  </p>
-                  <p>
-                    O participante reconhece e concorda não ter direito de aprovar e/ou a promover reclamações, que incluam, mas não se limitam às contestações referentes a invasão de privacidade, difamação e direito a publicidade, decorrente de qualquer uso, alteração, anuviamento, borrão, edição, distorção, efeito ilusório, ou qualquer utilização em composites, de sua Imagem, aparência ou informações submetidas. Reconhece que a <b>Promotora</b> não tem a obrigação de utilizar quaisquer direitos pelo presente concedidos. 
-                  </p>
-                  <p>
-                    As informações solicitadas aos participantes são as mínimas necessárias para entrar em contato com os possíveis ganhadores. Quando e se necessário, serão armazenadas em nossa base de dados, em ambiente seguro. 
-                  </p>
-                  <p>
-                    Em nenhuma circunstância, tais informações são vendidas ou compartilhadas com terceiros (exceto por decisão judicial), reservando-nos o direito de destruí-las após sua utilização. 
-                  </p>
-                </li>
-                <li>
-                  <p><b>DISPOSIÇÕES FINAIS</b></p>
-                  <p>
-                    Esta é uma <b>Promoção</b> comercial, com distribuição gratuita de prêmios, na modalidade sorteio, nos termos da Lei 5.768/1971, do Decreto 70.951/1972 e da Portaria 41/2008 do Ministério da Fazenda.
-                  </p>
-                  <p>
-                    Esta <b>Promoção</b> é autorizada pela Centralizadora de Promoções Comercias da Caixa Econômica Federal – CEPCO através do Certificado de Autorização CAIXA nº. 1-5314/2018.
-                  </p>
-                </li>
-              </ol>
+              <div class="reg-scroll">
+                <div class="text-center">
+                  <p>
+                    REGULAMENTO DA PROMOÇÃO COMERCIAL<br>"PROMOÇÃO 115 ANOS DA H-D EM PRAGA"
+                  </p>
+                </div>
+                <p>
+                  A Promoção "<b>115</b> ANOS DA <b>H-D</b> EM <b>PRAGA”</b> <b>("Promoção")</b>, na modalidade sorteio, será promovida por Harley-Davidson do Brasil Ltda., nome fantasia "Harley-Davidson", doravante denominada "<b>Promotora</b>", com sede na Cidade de Manaus, Estado do Amazonas, na Avenida do Turismo, 2.539, Ponta Negra, CEP 69037-005 e inscrita no CNPJ/MF sob o nº. 02.273.580/0001-16.
+                </p>
+                <ol>
+                  <li>
+                    <p><b>CONDIÇÕES GERAIS</b></p>
+                    <p>
+                      Observado o período de participação, para participar da Promoção basta que o participante <b>(“Participante”)</b> preencha o cadastro online no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>, incluindo consentimento para poder receber um convite, via e-mail ou contato telefônico, pela Promotora, de um eventual futuro “test ride” não obrigatório, neste ano de 2018, de uma das motocicletas da marca Harley-Davidson disponíveis em uma de suas concessionárias representantes da marca Harley-Davidson, podendo participar apenas pessoas residentes e domiciliadas em território brasileiro e que possuam carteira de habilitação específica e válida para condução de motocicletas. Caso o participante eventualmente receba um convite para test ride, deve consultar a Concessionária da marca Harley-Davidson mais próxima de sua localidade para receber informação sobre as concessionárias participantes.
+                    </p>
+                    <p>
+                      Entende-se por test ride o ato não obrigatório e/ou vinculativo de conduzir um dos veículos (motocicletas) da marca Harley-Davidson que sejam objeto do test ride em uma das unidades das concessionárias da marca Harley-Davidson, após recebimento e aceite não obrigatório de convite para tanto. O test-drive terá duração de tempo determinado pelo representante legal de uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção, conforme veículo a ser indicado por referido representante legal no momento de visita a uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção.
+                    </p>
+                    <p>
+                      Entende-se por test ride o ato não obrigatório e/ou vinculativo de conduzir um dos veículos (motocicletas) da marca Harley-Davidson que sejam objeto do test ride em uma das unidades das concessionárias da marca Harley-Davidson, após recebimento e aceite não obrigatório de convite para tanto. O test-drive terá duração de tempo determinado pelo representante legal de uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção, conforme veículo a ser indicado por referido representante legal no momento de visita a uma das unidades das concessionárias representantes da marca Harley-Davidson participantes da Promoção.
+                    </p>
+                    <p>
+                      Para que o Participante vencedor da Promoção e seu acompanhante possam usufruir da viagem em questão, deverão estes possuir passaporte e visto válidos de modo a possibilitar a viagem a Praga, República Checa. A Promotora não se responsabiliza por eventuais dificuldades na obtenção desses documentos.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>DATA DE INÍCIO E DE TÉRMINO DA PROMOÇÃO</b></p>
+                    <p>
+                      A <b>Promoção</b> terá início no dia <b>02 de abril de 2018</b> e término no dia <b>13 de maio de 2018</b>.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>PERÍODO DE PARTICIPAÇÃO</b></p>
+                    <p>
+                      O período de participação da <b>Promoção</b> se inicia a partir das 00:00 horas do dia 02 de abril de 2018 e se estende até às 23:59 horas do dia 13 de maio de 2018, horário oficial de Brasília.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>QUEM PODE PARTICIPAR</b></p>
+                    <p>
+                      A participação na <b>Promoção</b> é voluntária, a qualquer pessoa física, maior de 18 anos, capaz, residente e domiciliada em território brasileiro <b>que efetuar o cadastro no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>, autorizando eventual recebimento de convite da Promotora para um test ride não obrigatório de veículo (motocicleta) da marca Harley-Davidson em uma das concessionárias representantes da marca Harley-Davidson, conforme informações determinadas neste regulamento.</b>
+                    </p>
+                    <p>
+                      <b>Não podem participar:</b> pessoas incapazes, <b><u>pessoas sem a devida habilitação / licença específica e válida para condução de motocicleta</u></b>, pessoas jurídicas, funcionários, diretores, acionistas, sócios e colaboradores da <b>Promotora</b> e das unidades das concessionárias representantes da marca Harley-Davidson, empresas controladas ou coligadas, distribuidores, prestadores de serviços e fornecedores e/ou quaisquer outras empresas envolvidas na presente Promoção.
+                    </p>
+                    <p>
+                      <b>A participação na Promoção não é automática.</b> A participação depende que o Participante se inscreva, ao longo do período da Promoção, com seus dados em <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a> e aceite receber, eventualmente, um futuro convite pela <b>Promotora</b> de um test ride, não obrigatório, neste ano de 2018.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>MODO DE PARTICIPAÇÃO</b></p>
+                    <p>
+                      A participação na <b>Promoção</b> ocorre nos termos da descrição do presente item. É condição de participação na <b>Promoção</b> o cadastro no website e concordância em recebimento de futuro convite, neste ano de 2018, para test ride, em relação a uma das unidades das concessionárias representantes da marca Harley-Davidson, conforme especificação no website <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>. Caso receba um convite para test ride em uma das concessionárias participantes da Promoção, o Participante poderá checar os horários e datas disponíveis para test ride na concessionária representante da marca Harley-Davidson mais próxima à sua localidade.
+                    </p>
+                    <p>
+                      No ato da inscrição no website indicado acima, e aceitação de recebimento de um futuro convite neste ano de 2018 para test ride, por meio de formulário eletrônico, o Participante concordará em receber contato, por telefone e/ou via SMS ou por e-mail, por parte da Promotora, de futuro convite neste ano de 2018 para test ride, conforme disponibilidade de dias, horários e de motocicletas em uma das concessionárias representantes da marca Harley-Davidson.
+                    </p>
+                    <p>
+                      No ato da inscrição no website indicado acima, e aceitação de recebimento de um futuro convite neste ano de 2018 para test ride, por meio de formulário eletrônico, o Participante concordará em receber contato, por telefone e/ou via SMS ou por e-mail, por parte da Promotora, de futuro convite neste ano de 2018 para test ride, conforme disponibilidade de dias, horários e de motocicletas em uma das concessionárias representantes da marca Harley-Davidson.
+                    </p>
+                    <p>
+                      O participante também deverá responder: (a) Se possui uma motocicleta. Em caso de resposta positiva, deverá inserir marca e modelo; (b) Caso a resposta seja negativa, deverá responder se pretende comprar uma e quando pretende fazer essa aquisição. 
+                    </p>
+                    <p>
+                      O participante deverá indicar se concorda com o compartilhamento dessas informações entre empresas do grupo da Promotora e relacionadas. Concluído o cadastro, será gerado número da sorte para participação no sorteio. Ao fazer referido cadastro, será gerado o elemento sorteável (número da sorte), com base nas especificações da Loteria Federal que também serão enviados no e-mail cadastrado na <b>Promoção</b>.
+                    </p>
+                    <p>
+                      Em caso de perda do número da sorte, que será enviado por e-mail, o Participante poderá, a qualquer tempo, até a data e horário do efetivo sorteio, requisitar um novo envio deste número via e-mail ou por meio do site da promoção, bastando, para tanto, preenchimento de formulário específico no website da promoção informando o seu nome e CPF.
+                    </p>
+                    <p>
+                      Será um único número sorteável (números da sorte) por participante (CPF/MF), vedado o cadastro de mais de um CPF para a presente Promoção.
+                    </p>
+                    <p>
+                      O não preenchimento ou preenchimento incorreto de qualquer um dos dados requeridos levará automaticamente ao cancelamento da participação, sem necessidade de prévia comunicação.
+                    </p>
+                    <p>
+                      É de responsabilidade do participante o correto preenchimento do cadastro, principalmente quanto aos dados que permitam sua identificação e localização completa, existência de carteira de motorista específica e válida para o veículo (motocicleta) escolhido, sob pena de desclassificação.
+                    </p>
+                    <p>
+                      A participação de pessoas impedidas de participar desta <b>Promoção</b>, quando identificadas, serão invalidadas e desclassificadas imediatamente, ficando sua colocação destinada ao próximo participante classificado, caso já tenha sido apurada, e o próximo participante tenha tempo hábil para participar.
+                    </p>
+                    <p>
+                      Ficam os Participantes cientes, desde já, que não poderão utilizar de meios escusos para se cadastrar no website de participação desta <b>Promoção</b> e/ou mecanismos que criem condições de cadastramento irregular, desleais ou que atentam contra os objetivos e condições de participação previstas neste Regulamento, que é o cadastramento no website e aceite em receber futuro convite para test ride, não obrigatório, neste ano de 2018, conforme descrito acima.
+                    </p>
+                    <p>
+                      Da mesma forma, não poderão os Participantes valerem-se de meios fraudulentos de modo a possibilitar que o sistema de internet relativo ao cadastro na promoção registre mais de um cadastro por pessoa física / CPF.
+                    </p>
+                    <p>
+                      A Comissão Julgadora da <b>Promoção</b> não se responsabilizará por falsas informações submetidas pelo participante quando de seu cadastramento na <b>Promoção</b>.
+                    </p>
+                    <p>
+                      Todo e qualquer participação nesse sentido será automaticamente desconsiderada e tornada nula quando da ciência da Comissão Julgadora da <b>Promoção</b> de que o participante não preenche as condições ora estabelecidas no parágrafo anterior, além dos demais requisitos previstos neste Regulamento.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>MECÂNICA DA PROMOÇÃO – SORTEIO E NÚMERO DA SORTE</b></p>
+                    <p>
+                      Para o sorteio, serão gerados 100.000 (cem mil) números da sorte, por sistema, os quais serão distribuídos de forma aleatória, equitativa e concomitante, distribuídos em uma única série, de acordo com o Inciso V, alínea “a”, do artigo 2°, da Portaria 41/08, do Ministério da Fazenda.
+                    </p>
+                    <p>
+                      Cada número da sorte será composto por 5 (cinco) algarismos subsequentes, que vão de 00000 a 99999 (distribuídos de forma sequencial, sem intervalos, de modo a se limitarem a quantia de 100.000 números da sorte) que representam a ordem que serão considerados para confronto com o resultado na Loteria Federal.
+                    </p>
+                    <ol>
+                      <li>
+                        <p><b>SORTEIO - FORMA DE APURAÇÃO DOS GANHADORES</b></p>
+                        <p>
+                          Os Ganhadores serão determinados com base na extração da Loteria Federal, considerando a extração da Loteria Federal do dia 16/05/2018, mediante a utilização dos algarismos das unidades simples do 1º ao 5° prêmio da Loteria Federal, lido de cima para baixo.
+                        </p>
+                        <p>
+                          Exemplo da Extração da Loteria Federal do Brasil:
+                        </p>
+                        <p>
+                          1º prêmio: 57.64<b>3</b><br>
+                          2º prêmio: 42.76<b>2</b><br>
+                          3º prêmio: 20.21<b>1</b><br>
+                          4º prêmio: 59.89<b>6</b><br>
+                          5º prêmio: 13.72<b>5</b>
+                        </p>
+                        <p>
+                          Nesse exemplo, o número da sorte obtido é <b>32165</b>. Esse número será utilizado para definir o ganhador.
+                        </p>
+                        <p>
+                          Será considerado ganhador com o prêmio descrito no item 7 o participante portador deste número da sorte.
+                        </p>
+                        <p>
+                          Caso o Número da Sorte contemplado não encontre correspondente nos Números da Sorte distribuídos, pelo fato de não ter sido atribuído a nenhum participante, será considerado contemplado o Número da Sorte distribuído imediatamente superior ou, na falta deste, ao Número da Sorte distribuído imediatamente inferior.
+                        </p>
+                        <p>
+                          Caso a extração da Loteria Federal aqui mencionada deixe de ser realizada na data prevista, será utilizado o resultado da próxima Extração da Loteria Federal que venha a ser realizada.
+                        </p>
+                        <p>
+                          Todos os participantes da Promoção serão gerenciados pelo sistema de empresa especializada para tanto, de forma integrada, de forma que os contemplados serão identificados através do banco de dados. O mesmo sistema fará a distribuição concomitante de números de ordem (números da sorte). Após a apuração, o mesmo sistema ainda promoverá a identificação dos ganhadores junto ao referido banco de dados.
+                        </p>
+                        <p>
+                          Serão sumariamente excluídos/desclassificados da presente Promoção os Participantes que cometerem qualquer tipo de fraude ou tentativa de fraude, inclusive ao sistema online de cadastro na Promoção, ficando estes, ainda, sujeitos à responsabilização penal e civil.
+                        </p>
+                        <p>
+                          Os números da sorte com os quais os Participantes estarão concorrendo aos prêmios serão disponibilizados via e-mail após o preenchimento do cadastro da campanha no site <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>. Em caso de perda do número da sorte, que será enviado por e-mail, o Participante poderá, a qualquer tempo, até a data e horário do efetivo sorteio, requisitar um novo envio deste número via e-mail ou por meio do site da promoção, bastando, para tanto, preenchimento de formulário específico no website da promoção informando o seu nome e CPF.
+                        </p>
+                        <p>
+                          Cada número da sorte será vinculado ao Titular do respectivo CPF indicado do cadastro.
+                        </p>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <p><b>PRÊMIOS</b></p>
+                    <p>
+                      Serão contemplados 1 (um) participante, com direito a 1 (um) acompanhante, com 1 (um) pacote de viagem, na classe econômica, para a Praga, capital da República Checa, para assistir o evento de comemoração dos 115 anos da <b>Promotora</b>, durante 7 (sete) dias com 6 (seis) noites no HOTEL CLARION CONGRESS HOTEL PRAGUE com quarto duplo tipo Standard, incluindo: <b>(i)</b> a data de embarque, que ocorrerá em 02/07/2018 e de retorno ao País, que ocorrerá em 09/07/2018, e <b>(ii)</b> 04 (quatro) dias de atividades no evento “<i>H-D 115th Prague anniversary</i>” <a href="https://h-d.prague115.com/" target="_blank" class="lnk white">https://h-d.prague115.com/</a> , doravante denominado "<b>Prêmio</b>".
+                    </p>
+                    <p>
+                      O <b>Prêmio</b> será composto por: <b>(i)</b> passagem aérea de ida e volta em classe econômica para o Participante e seu acompanhante, saindo do Brasil para a cidade de Praga, Capital da República Checa, e voltando deste último local para o Brasil; <b>(ii)</b> Hospedagem no HOTEL CLARION CONGRESS HOTEL PRAGUE ("<b>Hotel</b>"), localizado na 945/, Freyova 945/33, Vysočany, 190 00 Praha, Czechia, para 6 (seis) noites, entrada ("<b>check-in</b>") em 3 de julho de 2018 e saída ("<b>check-out</b>") em 9 de julho de 2018; <b>(iii)</b> 2 (dois) cupons (<b>“Cupons”</b>, ou, individualmente, <b>“Cupom”</b>) para a entrada no evento de 115º aniversário da Harley-Davidson em Praga, República Checa, durante os 4 dias de atividades, <b>(iv) 2</b> (dois) pacotes promocionais de produtos relacionados ao evento (“<b>Itens Promocionais</b>”), que serão entregues se o Participante vencedor da Promoção comparecer ao Hotel.
+                    </p>
+                    <p>
+                      Um pacote de Itens Promocionais inclui os seguintes produtos: <b>(i)</b> 1 (uma) camiseta contendo o logotipo do evento, <b>(ii)</b> 1 (um) patch contendo o logotipo do evento, <b>(iii)</b> 1 (uma) mochila de cordão contendo o logotipo do evento; <b>(iv)</b> 1 (um) pin contendo o logotipo do evento; <b>(v)</b> 1 (um) chaveiro contendo o logotipo do evento, (vi) 1 (um) impresso contendo parabenização por participação no evento e Cupom relacionado ao evento completo, contendo QR Code. A imagem abaixo ilustra as fotos de cada um desses itens mencionados:
+                    </p>
+                    <p>
+                      <img src="images/imagem-regulameto.jpg" alt="" class="img-fluid">
+                    </p>
+                    <p>
+                      Os Prêmios não contemplarão eventuais despesas do contemplado e seu acompanhante, tais como, mas não limitados a: <b>(i)</b> alimentação, <b>(ii)</b> seguro-viagem, <b>(iii)</b> seguro-saúde, <b>(iv)</b> seguro de vida, <b>(v)</b> gastos com transporte interno no país onde ocorrerá o evento, <b>(vi)</b> quaisquer gastos não previstos na presente promoção, <b>(vii)</b> consumo de bebidas alcoólicas; <b>(viii)</b> ligações telefônicas, locais, interurbanas ou internacionais; <b>(ix)</b> acesso à internet; <b>(x)</b> uso de cofre; <b>(xi)</b> consumo de produtos do frigobar; <b>(xii)</b> uso de serviços oferecidos pelo hotel, tais como, lavanderia, spa, restaurante, cassino, entre outros; <b>(xiii)</b> custos relacionados ao excesso de bagagem no transporte aéreo e terrestre, incluindo Duty Free e eventuais impostos; <b>(xiv)</b> early check in e late check out; e <b>(xv)</b> todos aqueles itens que não estejam expressamente incluídos na descrição do prêmio acima e, posteriormente na "Carta Compromisso".
+                    </p>
+                    <p>
+                      Os <b>Prêmios</b> distribuídos nesta promoção serão entregues conforme as condições e características indicadas neste instrumento, sendo vedadas quaisquer alterações por parte dos contemplados seja por meio de adições, exclusões ou substituições dos itens que os compõem.
+                    </p>
+                    <p>
+                      O valor estimado individual do prêmio é de R$ 6.315,00 (seis mil trezentos e quinze reais) - o pacote. O Valor Total dos Prêmios corresponde a R$ 12.630,00 (Doze mil seiscentos e trinta reais), em relação aos quais aproximadamente R$ 630,00 (seiscentos e trinta reais) se referem ao valor do pacote de Itens Promocionais, aproximadamente R$ 4.000,00 (quatro mil reais) se referem ao valor de hospedagem e aproximadamente R$ 8.000,00 (oito mil reais) se referem ao valor de passagens aéreas.
+                    </p>
+                    <p>
+                      <b>
+                        A obtenção e a apresentação dos documentos necessários à fruição dos pacotes de viagem, objetos da distribuição gratuita nesta Promoção, incluindo, mas não se limitando, a carteira de motorista válida para condução de motocicletas, passaporte válido e visto de entrada no país, serão de exclusiva responsabilidade do contemplado e seu acompanhante.
+                      </b>
+                    </p>
+                    <p>
+                      Caso o contemplado e seu acompanhante não obtenham, por qualquer razão, os referidos documentos, perderão direito ao recebimento do prêmio e o valor correspondente será recolhido ao Tesouro Nacional, como renda da União, pela <b>Promotora</b>.
+                    </p>
+                    <p>
+                      <b>
+                        Os prêmios oferecidos gratuitamente nesta Promoção não poderão ser convertidos em dinheiro, conforme disposto no §3º do artigo 1º da Lei nº. 5.768/1971, tampouco substituídos por quaisquer outros bens, serviços ou direitos de valor igual ou semelhante.
+                      </b>
+                    </p>
+                    <p>
+                      <b>
+                        Não são objetos de premiação os itens vedados no artigo 10° do Decreto 70.951/72, quais sejam: medicamentos, armas e munições, explosivos, fogos de artifício ou de estampido, bebidas alcóolicas, fumos e seus derivados.
+                      </b>
+                    </p>
+                    <p>
+                      A premiação é pessoal e intransferível, não sendo admitida sua negociação ou substituição por outra espécie de bem ou serviços, endosso ou conversão em dinheiro.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>APURAÇÃO DO RESULTADO E EXIBIÇÃO DO PRÊMIO</b></p>
+                    <p>
+                      A apuração do ganhador será realizada com base em resultado da Loteria Federal, extração do dia 16/05/2018. 
+                    </p>
+                    <p>
+                      <b>Exibição dos Prêmios:</b> Em virtude da natureza dos prêmios "Pacotes de viagens”, não haverá exibição física dos prêmios.
+                    </p>
+                    <p>
+                      A <b>Promotora</b> comprovará a propriedade dos prêmios em até 08 (oito) dias antes da data da apuração, por meio de contrato de prestação de serviços firmado com agência de turismo ou recibo de depósito caução no valor dos prêmios, além de nota fiscal, contrato, recibo e/ou termo de doação. Tais comprovantes ficarão disponíveis no estabelecimento da Promotora, no endereço indicado acima, para eventual processo de fiscalização e, posteriormente, será enviado para a Caixa, anexado ao processo de prestação de contas, nos termos dos artigos 5° e 15º do Decreto 70.951/72.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>DIVULGAÇÃO DO RESULTADO E ENTREGA DO PRÊMIO</b></p>
+                    <p>
+                      O resultado da <b>Promoção</b> será divulgado no dia: 17/05/2018 às 16h00 (Dezesseis) horas, por meio do site da <b>Promoção</b> <a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>
+                    </p>
+                    <p>
+                      Além da divulgação no site, os participantes ganhadores serão informados diretamente do resultado, em até 7 (sete) dias, por meio de contato telefônico e e-mail fornecido pelo participante no ato do cadastro.
+                    </p>
+                    <p>
+                      O Prêmio deverá ser usufruído pelo ganhador e seu acompanhante no período de 02/07/2018 (embarque) a 09/07/2018 (retorno) em decorrência de horários e dias de funcionamento do evento H-D 115th Prague event, localizado em Praga, capital da República Checa.
+                    </p>
+                    <p>
+                      Em até 30 (trinta) dias contados da data do término da apuração, no <u>local escolhido pelo participante</u>, a Promotora entregará ao ganhador o voucher do pacote de viagem e os Itens Promocionais, por meio de Carta de Compromisso, sem nenhum ônus, contendo todas as informações relativas à viagem. Os Itens Promocionais, no entanto, serão recebidos no Hotel, na data de chegada no Hotel. Assim, o não comparecimento ao Hotel / não comparecimento à viagem acarreta na perda do direito de recebimento dos Itens Promocionais. 
+                    </p>
+                    <p>
+                      Quando da entrega da Carta de Compromisso, o ganhador deverá estar munido de seus documentos pessoais (RG e CPF) e deverá assinar um termo de quitação e entrega de Prêmio, para recebimento do prêmio. 
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>DISPOSIÇÕES GERAIS</b></p>
+                    <p>
+                      O ganhador terá até 180 (cento e oitenta) dias, contados do término do prazo da <b>Promoção</b> para reclamar o prêmio. Não reclamado dentro desse prazo, caducará o direito do respectivo titular e o valor correspondente será recolhido, pela empresa autorizada, ao Tesouro Nacional, como renda da União, no prazo de 10 (dez) dias, nos termos do artigo 6º do Decreto 70.951/1972.
+                    </p>
+                    <p>
+                      Até 20 (vinte) dias antes do embarque, o ganhador e acompanhante deverão providenciar todos os documentos necessários para a realização da sua viagem, sendo que, posteriormente, os bilhetes aéreos e os vouchers lhes serão enviados.
+                    </p>
+                    <p>
+                      É de total responsabilidade dos ganhadores e acompanhantes a obtenção de passaporte, vistos e demais providências ou documentos que se façam necessários para a realização da viagem.
+                    </p>
+                    <p>
+                      A <b>Promotora</b> não se responsabilizará pela autenticidade dos dados fornecidos pelos participantes no ato de inscrição, ou pelo fornecimento de informações incorretas, imprecisas ou incompletas, que impossibilitem qualquer contato com os ganhadores. 
+                    </p>
+                    <p>
+                      A <b>Promotora</b> não se responsabilizará por uma eventual negação da entrada do ganhador e/ou de seus acompanhantes no País de destino, por parte do Consulado ou das Autoridades Migratórias daquele País, bem como por qualquer ato que estes venham a cometer em afronta aos bons costumes, à  moral, e às leis, por quaisquer atos danosos causados que os ganhadores e/ou acompanhantes cometerem ou vierem a ser vítimas e suas consequências, durante a viagem, incluindo, mas não limitando eventuais responsabilizações civis ou criminais.
+                    </p>
+                    <p>
+                      Os participantes da <b>Promoção</b> assumem total e exclusiva responsabilidade por eventuais violações à intimidade, privacidade, honra e imagem de qualquer pessoa, a deveres de segredo, à propriedade industrial, direito autoral e/ou a quaisquer outros bens juridicamente protegidos, eximindo a <b>Promotora</b> de quaisquer responsabilidades relativamente a tais fatos, aspectos, direitos e/ou situações.
+                    </p>
+                    <p>
+                      Caso algum acompanhante, indicado pelo ganhador, seja menor de idade, será de responsabilidade exclusiva do ganhador a obtenção de autorizações necessárias para viagem, nos termos previstos no Estatuto da Criança e Adolescente (Lei 8069/90).
+                    </p>
+                    <p>
+                      Em caso de dúvidas a respeito da presente <b>Promoção</b>, os participantes poderão contatar a <b>Promotora</b> por meio do e-mail sac@harley-davidson.com.br ou através do telefone 0800-724-1188. 
+                    </p>
+                    <p>
+                      Quaisquer dúvidas, divergências ou situações não previstas neste Regulamento serão julgadas e decididas de forma soberana e irrecorrível pela <b>Promotora</b> e, posteriormente, submetidas à CEPCO/CAIXA. O PROCON local, bem como os órgãos conveniados, em cada jurisdição receberão as reclamações devidamente fundamentadas, dos participantes.
+                    </p>
+                    <p>
+                      Caso seja verificada qualquer fraude, dados incorretos no cupom ou quaisquer outras divergências, incompatíveis com os termos deste Regulamento, o participante ganhador cuja irregularidade for verificada, será excluído automaticamente da <b>Promoção</b> Comercial, sendo o prêmio transferido ao próximo participante colocado, o qual teve as condições declaradas válidas.
+                    </p>
+                    <p>
+                      A <b>Promotora</b> se reserva o direito de, a seu exclusivo critério, alterar os termos neste Regulamento garantida a divulgação de forma eficaz e sempre buscando assegurar sua legalidade sem prejuízo de seus participantes.
+                    </p>
+                    <p>
+                      A simples participação desta <b>Promoção</b> Comercial, através do envio do cadastramento no site da <b>Promoção</b>, implica no conhecimento e total aceitação deste Regulamento.
+                    </p>
+                    <p>
+                      Os casos omissos serão esclarecidos e dirimidos por representantes da Organização da <b>Promoção</b>, membros da Comissão Julgadora, cujas decisões são soberanas e irrecorríveis.
+                    </p>
+                    <p>
+                      A participação nesta <b>Promoção</b> Comercial não gerará ao participante e/ou ganhador nenhum outro direito ou vantagem que não esteja expressamente prevista neste Regulamento.
+                    </p>
+                    <p>
+                      O Regulamento está disponível no site [<a href="http://115anoshd.com.br" target="_blank" class="lnk white">http://115anoshd.com.br</a>] e nas lojas participantes, sendo que a simples participação implica na aceitação total e irrestrita de todos os seus itens.
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>DIREITO DE IMAGEM</b></p>
+                    <p>
+                      O ganhador e/ acompanhante autorizam a <b>Promotora</b>, em caráter gratuito, não exclusivo, irrevogável, a usar seu nome civil completo ou abreviado, sua imagem, sua voz, profissão e demais dados em entrevistas em todos e quaisquer materiais, suportes, ações, meios de comunicação, exclusivamente para a divulgação da <b>Promoção</b>, pelo período de até 1 (um) ano, a partir da data da divulgação dos resultados.
+                    </p>
+                    <p>
+                      Nada neste instrumento será interpretado como imputando à Organização da <b>Promoção</b> a obrigação de retirar qualquer obra ou material de circulação ou do mercado que utilize a Imagem do participante após o término da presente autorização, desde que estes já tenham sido colocados no mercado pela <b>Promotora</b> ou por terceiros por ela contratados, dentro do período de vigência da referida autorização, respeitando-se assim os direitos de exaustão sobre tais materiais.
+                    </p>
+                    <p>
+                      O participante reconhece e concorda que outros terceiros, quando da cobertura ou divulgação da <b>Promoção</b> ao público, poderão vir a, ocasionalmente, retratar parte ou o todo de sua Imagem e que tal utilização sob nenhuma hipótese será atribuída ou gerará qualquer responsabilidade à <b>Promotora</b> e suas empresas do mesmo grupo econômico. 
+                    </p>
+                    <p>
+                      O participante reconhece e concorda não ter direito de aprovar e/ou a promover reclamações, que incluam, mas não se limitam às contestações referentes a invasão de privacidade, difamação e direito a publicidade, decorrente de qualquer uso, alteração, anuviamento, borrão, edição, distorção, efeito ilusório, ou qualquer utilização em composites, de sua Imagem, aparência ou informações submetidas. Reconhece que a <b>Promotora</b> não tem a obrigação de utilizar quaisquer direitos pelo presente concedidos. 
+                    </p>
+                    <p>
+                      As informações solicitadas aos participantes são as mínimas necessárias para entrar em contato com os possíveis ganhadores. Quando e se necessário, serão armazenadas em nossa base de dados, em ambiente seguro. 
+                    </p>
+                    <p>
+                      Em nenhuma circunstância, tais informações são vendidas ou compartilhadas com terceiros (exceto por decisão judicial), reservando-nos o direito de destruí-las após sua utilização. 
+                    </p>
+                  </li>
+                  <li>
+                    <p><b>DISPOSIÇÕES FINAIS</b></p>
+                    <p>
+                      Esta é uma <b>Promoção</b> comercial, com distribuição gratuita de prêmios, na modalidade sorteio, nos termos da Lei 5.768/1971, do Decreto 70.951/1972 e da Portaria 41/2008 do Ministério da Fazenda.
+                    </p>
+                    <p>
+                      Esta <b>Promoção</b> é autorizada pela Centralizadora de Promoções Comercias da Caixa Econômica Federal – CEPCO através do Certificado de Autorização CAIXA nº. 1-5314/2018.
+                    </p>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
@@ -662,6 +678,25 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form.js"></script>
+
+    <!-- Código do Google para tag de remarketing -->
+    <!--
+    As tags de remarketing não podem ser associadas a informações pessoais de identificação nem inseridas em páginas relacionadas a categorias de confidencialidade. Veja mais informações e instruções sobre como configurar a tag em: http://google.com/ads/remarketingsetup
+    -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 960420232;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960420232/?guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
 
   </body>
 </html>
