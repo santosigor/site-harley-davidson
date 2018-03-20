@@ -11,65 +11,78 @@ body.home {
 	//background-size: 100% auto;
 	header {
 		position:relative;
-		#banner-home {
-			.item {
-				&.bg-1 {
-					background: url('../../images/banner-1.jpg') center center;
-					background-size: cover;
-				}
-				&.bg-2 {
-					background: url('../../images/banner-2.jpg') center center;
-					background-size: cover;
-				}
-				&.bg-3 {
-					background: url('../../images/banner-3.jpg') center center;
-					background-size: cover;
+		.hd-dots {
+			position: absolute;
+			bottom:35px;
+			left:0;
+			width:89%;
+			text-align:right;
+			cursor:default;
+			span {
+				display: inline-block;
+				width:14px;
+				height:14px;
+				margin:0 4px;
+				border: 2px solid $cinza-banner;
+				border-radius:10px;
+				cursor:pointer;
+			}
+		}
+		&.bg-1 {
+			background: url('../../images/banner-1.jpg') center center;
+			background-size: cover;
+  		@extend %transition0-5s-e-i-o;
+			.hd-dots {
+				span {
+					&:nth-child(1) {
+  					@extend %transition0-2s-e-i-o;
+						background: $cinza-banner;
+					}
 				}
 			}
-			.owl-nav {
-				margin-top:0;
-				.owl-prev, .owl-next{
-					position: absolute;
-					top:50%;
-					margin-top:-31px;
-					width:40px;
-					height:62px;
-					border-radius: 0;
-				}
-				.owl-prev{
-					left:20px;
-					background: url(../../images/icon-prev.png);
-				}
-				.owl-next{
-					right:20px;
-					background: url(../../images/icon-next.png);
+		}
+		&.bg-2 {
+			background: url('../../images/banner-2.jpg') center center;
+			background-size: cover;
+  		@extend %transition0-5s-e-i-o;
+			.hd-dots {
+				span {
+					&:nth-child(2) {
+  					@extend %transition0-2s-e-i-o;
+						background: $cinza-banner;
+					}
 				}
 			}
-			.owl-dots {
+		}
+		&.bg-3 {
+			background: url('../../images/banner-3.jpg') center center;
+			background-size: cover;
+  		@extend %transition0-5s-e-i-o;
+			.hd-dots {
+				span {
+					&:nth-child(3) {
+  					@extend %transition0-2s-e-i-o;
+						background: $cinza-banner;
+					}
+				}
+			}
+		}
+		.hd-nav {
+			.hd-prev, .hd-next{
 				position: absolute;
-		    margin-top: -35px;
-		    left:0;
-		    width: 89.5%;
-		    text-align:right;
-		    .owl-dot {
-			    span {
-				    width: 13px;
-				    height: 13px;
-				    background: transparent;
-    				border: 1px solid #fff;
-    				margin: 5px 5px;
-					}
-					&:hover {
-						span {
-							background: $white;
-						}
-					}
-					&.active {
-						span {
-							background: $white;
-						}
-					}
-				}
+				top:50%;
+				margin-top:-31px;
+				width:40px;
+				height:62px;
+				cursor:pointer;
+			}
+			.hd-prev{
+				left:20px;
+				background: url(../../images/icon-prev.png);
+			}
+			.hd-next{
+				right:20px;
+				background: url(../../images/icon-next.png);
 			}
 		}
 	}
@@ -239,7 +252,7 @@ body.home {
 					margin-bottom:15px;
 				}
 				.font-size-4 {
-					max-width: 279px;
+					max-width: 237px;
 					font-size: .8em;
 					margin-bottom:0;
 					a {
@@ -315,7 +328,7 @@ body.home {
 			.img-sct-4 {
 				position:absolute;
 				right:0;
-				top: 110px;
+				top: 95px;
 			}
 			.text-sct-4 {
 		    margin-top: 109px;
@@ -606,16 +619,48 @@ body.home {
 @media (max-width: 768px) {
 	body.home {
 		header {
+			.hd-dots {
+				position: initial;
+				text-align:center;
+				padding:20px 0;
+				width:100%;
+				span {
+					width:8px;
+					height:8px;
+					margin:0 4px;
+				}
+			}
+			.hd-nav {
+				.hd-prev, .hd-next{
+					margin-top:-15px;
+					width:20px;
+					height:30px;
+				}
+				.hd-prev{
+					left:10px;
+					background: url(../../images/icon-prev.png);
+					background-size:100% auto;
+				}
+				.hd-next{
+					right:10px;
+					background: url(../../images/icon-next.png);
+					background-size:100% auto;
+				}
+			}
 			.text-header {
 				color: $white;
-				max-width:430px;
+				max-width:100%;
+				text-align:center;
 				margin-top: 56px;
 				margin-bottom: 68px;
+				img {
+					width:160px;
+				}
 				.font-size-1 {
-					font-size: 33pt;
-			    line-height: 36pt;
-			    margin-top: 7px;
-					margin-bottom: 52px;
+			    font-size: 29pt;
+			    line-height: 32pt;
+			    margin-top: 20px;
+			    margin-bottom: 19px;
 				}
 				.font-size-2 {
 					font-size: 23pt;
@@ -623,8 +668,8 @@ body.home {
 					margin-bottom:14px;
 				}
 				.font-size-3 {
-					font-size: 17pt;
-    			line-height: 25pt;
+					font-size: 14pt;
+    			line-height: 17pt;
 					margin-bottom:15px;
 				}
 				.bt {
@@ -633,6 +678,7 @@ body.home {
 				.font-size-4 {
 					max-width: 237px;
 					font-size: .7em;
+					margin:0 auto;
 					margin-bottom:0;
 					a {
 						color:$white;
