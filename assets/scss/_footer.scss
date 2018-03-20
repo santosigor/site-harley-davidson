@@ -50,3 +50,11 @@ footer {
 	  padding: 56px 0;
 	}
 }
+
+@media (max-width: 480px) {
+	footer {
+	  .text-left {
+	    text-align: center!important;
+		}
+	}
+}

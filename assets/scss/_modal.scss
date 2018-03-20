@@ -87,8 +87,8 @@
     max-width: 743px;
   }
   #modalNaoPossuiCNH {
-    modal-dialog {
-      max-width: 613px;
+    .modal-dialog {
+      max-width: 643px;
     }
     p {
       font-size: 2em;
@@ -105,8 +105,8 @@
     max-width: 713px;
   }
   #modalNaoPossuiCNH {
-    modal-dialog {
-      max-width: 613px;
+    .modal-dialog {
+      max-width: 643px;
     }
     p {
       font-size: 1.8em;
@@ -123,6 +123,9 @@
     max-width: 643px;
   }
   #modalNaoPossuiCNH {
+    .modal-dialog {
+      max-width: 478px;
+    }
     p {
       font-size: 1.4em;
       margin-bottom:30px;

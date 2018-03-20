@@ -24,7 +24,7 @@ function mascaraTexto(assunto, mascara){
 // Validar CPF
 
 function ValidaCPF(cpf) {
-  d=document.inscricao;
+  d=document.form;
   cpf=cpf.replace("-", "")
   cpf=cpf.replace(".", "")
   cpf=cpf.replace(".", "")
@@ -84,3 +84,12 @@ function BloquearLetras(dom,tipo){
   }
   dom.value=dom.value.replace(regex,'');
 }
+
+$(document).ready(function() {
+
+  // Focus campo CPF
+  $("input#cpf").focus(function(){
+    $('span#cpf_invalido').css('display', 'none');
+  });
+
+});

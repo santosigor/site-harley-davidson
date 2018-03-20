@@ -56,7 +56,7 @@ b, strong {
 	}
 }
 
-#cpf_invalido, #reenviamos {
+#cpf_invalido, #reenviamos, #cpf_nao_preenchido {
 	display:none;
 }
 
@@ -122,11 +122,27 @@ a, button {
 		max-width: 790px;
 		margin:0 auto;
 	}
+	.section-container {
+		padding: 80px 0;
+	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
 	.container-fluid {
 		max-width: 595px;
 		margin:0 auto;
+	}
+	.section-container {
+		padding: 80px 0;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.container-fluid {
+		max-width: 595px;
+		margin:0 auto;
+	}
+	.section-container {
+		padding: 40px 0;
 	}
 }

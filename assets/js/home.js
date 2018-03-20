@@ -1,17 +1,17 @@
-/*function ReceberNumeroSorte(){
+function ReceberNumeroSorte(){
 
-  d = document.numero_sorte;
-  erro = false;
+  d = document.form;
+  erro2 = false;
               
-  if(d.cpf_home.value==""){
-    erro=true; 
+  if(d.cpf.value==""){
+    erro=true;
   } 
   if (erro) {
-     $('#cpf_invalido_home').html(texto).css('display', 'block');
+     $('#cpf_nao_preenchido').css('display', 'block');
   } else {
     d.submit();
   }
-}*/
+}
 
 $(document).ready(function() {
 
@@ -69,5 +69,9 @@ $(document).ready(function() {
       $('.home header').addClass('bg-1');
     }
   });
+
+  /*setTimeout(function(){
+    $('.hd-nav .hd-next').click();
+  }, 9000);*/
 
 });

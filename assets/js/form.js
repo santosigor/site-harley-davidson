@@ -2,7 +2,7 @@
 
 function Inscricao(){
 
-  d = document.inscricao;
+  d = document.form;
   erro = false;
   texto = '';
               
@@ -128,11 +128,6 @@ $(document).ready(function() {
   // Focus campo e-mail
   $("input#email").focus(function(){
     $('span#email_invalido').css('display', 'none');
-  });
-
-  // Focus campo CPF
-  $("input#cpf").focus(function(){
-    $('span#cpf_invalido').css('display', 'none');
   });
 
 });
