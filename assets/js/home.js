@@ -70,8 +70,8 @@ $(document).ready(function() {
     }
   });
 
-  /*setTimeout(function(){
+  setInterval(function(){
     $('.hd-nav .hd-next').click();
-  }, 9000);*/
+  }, 9000);
 
 });

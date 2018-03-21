@@ -82,8 +82,6 @@ function Inscricao(){
   if (erro) {
      $('#info-campo-vazio').html(texto).css('display', 'block');
   } else {
-    //Pixel de Conversão
-    fbq('track', 'CompleteRegistration', { value: 25.00, currency: 'USD' });
     d.submit();
   }
 }

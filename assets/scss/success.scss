@@ -13,6 +13,20 @@ body.bd-success {
 		min-height: 100vh;
 		color: $white;
 	}
+	.footer-success {
+		max-width: 77.5%;
+		margin:0 auto;
+		margin-bottom:47px;
+		color:#777575;
+		img {
+			margin-bottom:12px;
+		}
+		.font-size-f {
+	    font-size: .7em;
+	    line-height: 14px;
+	    margin-bottom:0;
+		}
+	}
 }
 
 // responsive
@@ -41,15 +55,6 @@ body.bd-success {
 		}
 		.bt {
 	    margin-bottom: 48px;
-		}
-		.footer-success {
-			max-width: 474px;
-			margin: 0 auto;
-			margin-bottom:47px;
-			color:#777575;
-			img {
-				margin-bottom:12px;
-			}
 		}
 	}
 }
@@ -82,15 +87,6 @@ body.bd-success {
 	    margin-bottom: 40px;
 			&:before {
 				margin-top: -7px;
-			}
-		}
-		.footer-success {
-			max-width: 522px;
-			margin: 0 auto;
-			margin-bottom:50px;
-			color:#777575;
-			img {
-				margin-bottom:24px;
 			}
 		}
 	}
