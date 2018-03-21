@@ -30,7 +30,7 @@ function Inscricao(){
     erro=true; 
     texto += '<p>Erro: O CAMPO <b>ESTADO</b> NÃO FOI PREENCHIDO*';
   }
-  if(d.cidade.value == "0"){
+  if(d.cidade.value == ""){
     erro=true; 
     texto += '<p>Erro: O CAMPO <b>CIDADE</b> NÃO FOI PREENCHIDO*';
   }
