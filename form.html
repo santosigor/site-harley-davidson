@@ -158,7 +158,8 @@
                     </div>
                     <div class="campo">
                       <label class="d-block">DATA DE NASCIMENTO</label>
-                      <input name="data_nascimento" type="text" placeholder="DD-MM-AAAA" onkeyup="mascaraTexto(event,'99-99-9999');" maxlength="10">
+                      <input name="data_nascimento" id="data_nascimento" type="text" placeholder="DD/MM/AAAA" onblur="validaDat(this,this.value);" onkeyup="mascaraTexto(event,'99/99/9999');BloquearLetras(this,'num');" maxlength="10">
+                      <span class="campo-invalido" id="dt_nasc_invalido">Data de Nascimento inválida!</span>
                     </div>
                     <div class="campo">
                       <label class="d-block">POSSUI MOTOCICLETA?</label>
@@ -274,7 +275,7 @@
                           <input type="checkbox" name="regulamento"/>
                           <div class="state"><label></label></div>
                         </div>
-                        <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no<br> <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk">regulamento</a> do concurso 115 Anos da Harley-Davison®, em Praga.</span>
+                        <span class="d-block font-noto-sans">Confirmo eu li, e estou de acordo com todas as regras no<br> <a href="#" data-toggle="modal" data-target="#modalRegulamento" class="font-noto-sans-bold lnk">regulamento</a> do concurso 115 Anos da Harley-Davidson®, em Praga.</span>
                       </div>
                     </div>
                     <div class="campo">
@@ -317,7 +318,7 @@
               <p class="font-small-0 text-color-3">
                 &copy;2001-2018 H.D. All rights reserved.
               </p>
-              <div class="rights text-left">
+              <div class="rights text-center">
                 <p class="font-size-f text-color-3">
                 H-D OU SEUS AFILIADOS. HARLEY-DAVIDSON ® DO BRASIL, HARLEY, H-D E O LOGOTIPO COM BARRA 2018&copy; E ESCUDO ESTÃO ENTRE AS MARCAS COMERCIAIS DA H-D U.S.A LL. MARCAS COMERCIAIS DE TERCEIROS SÃO DE PROPRIEDADE DE SEUS RESPECTIVOS PROPRIETÁRIOS.
                 </p>
@@ -362,7 +363,7 @@
             </div>
             <div class="modal-body">
               <p class="font-cheddar-gothic-sans title-regulamento text-center">
-                Regulamento
+                REGULAMENTO
               </p>
               <div class="reg-scroll">
                 <div class="text-center">

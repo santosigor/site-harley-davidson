@@ -128,4 +128,9 @@ $(document).ready(function() {
     $('span#email_invalido').css('display', 'none');
   });
 
+  // Focus campo data de nascimento
+  $("input#data_nascimento").focus(function(){
+    $('span#dt_nasc_invalido').css('display', 'none');
+  });
+
 });

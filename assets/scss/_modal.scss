@@ -98,6 +98,11 @@
       margin-bottom:40px;
     }
   }
+  #modalEsqueciMeuNumeroDaSorte {
+    .modal-dialog {
+      max-width: 623px;
+    }
+  }
 }
 
 @media (max-width: 1366px) {
@@ -114,6 +119,11 @@
     }
     .bt {
       margin-bottom:40px;
+    }
+  }
+  #modalEsqueciMeuNumeroDaSorte {
+    .modal-dialog {
+      max-width: 623px;
     }
   }
 }
